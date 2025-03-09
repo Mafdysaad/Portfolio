@@ -39,11 +39,11 @@ class ViewBody extends StatelessWidget {
                     children: [
                       Text(
                         'Hi, I am',
-                        style: Fontstyle.soyombo18_sembold(),
+                        style: Style.soyombo18_sembold(),
                       ),
-                      Text('Mafdy Saad', style: Fontstyle.soyombo20_bold()),
+                      Text('Mafdy Saad', style: Style.soyombo20_bold()),
                       Text('Front-end Developer / UI Designer',
-                          style: Fontstyle.soyombo18_sembold()),
+                          style: Style.soyombo18_sembold()),
                     ],
                   ),
                   Column(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class Fontstyle {
+abstract class Style {
   static TextStyle soyombo20_bold() {
     return TextStyle(
         color: Colors.white,
