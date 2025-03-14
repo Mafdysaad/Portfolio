@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/const/animatedwrapper.dart';
+import 'package:portfolio/core/const/animation/animatedwrapper.dart';
 import 'package:portfolio/core/utils/assets.dart';
 
 class Options extends StatelessWidget {

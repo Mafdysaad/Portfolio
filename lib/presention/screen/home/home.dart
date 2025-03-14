@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portfolio/core/const/animatedwrapper.dart';
+import 'package:portfolio/core/const/animation/animatedwrapper.dart';
 import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/presention/screen/home/widget/custom_drawer.dart';
 
 import 'package:portfolio/presention/screen/home/widget/view_body.dart';
 
@@ -17,6 +18,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   late Animation<Offset> animation_1;
   late Animation<Offset> animation_2;
   late Tween<double> iconanmate;
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
   double target = 40;
   @override
@@ -32,21 +34,28 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext mafdy) {
     return Scaffold(
+        key: _scaffoldkey,
+        //backgroundColor: Color(0xff0c0b0b),
+        drawer: CustomDrawer(),
         appBar: AppBar(
+          leadingWidth: 100,
           toolbarHeight: 100,
           backgroundColor: Color(0xff0c0b0b),
-          titleSpacing: 42,
-          title: AnimatedWrapper(
-              child: Image.asset(Assets.resourceImagesCustomDrawer)),
+          leading: AnimatedWrapper(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Image.asset(Assets.resourceImagesCustomDrawer),
+            ),
+            function: () => _scaffoldkey.currentState?.openDrawer(),
+          ),
           actions: [
             Padding(
-                padding: EdgeInsets.only(right: 24),
+                padding: EdgeInsets.only(right: 30),
                 child: AnimatedWrapper(
                     child: SvgPicture.asset(Assets.resourceImagesDrawer)))
           ],
-          leadingWidth: 200,
         ),
         body: ViewBody(
           animationController: animationController,

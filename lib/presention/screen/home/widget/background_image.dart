@@ -10,6 +10,7 @@ class BackgroundImage extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: FittedBox(
-            fit: BoxFit.fill, child: Image.asset(Assets.resourceImagesFinal)));
+            fit: BoxFit.cover,
+            child: Image(image: AssetImage(Assets.resourceImagesFinal))));
   }
 }
