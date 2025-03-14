@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/core/utils/fontstyle.dart';
 import 'package:portfolio/presention/screen/home/widget/Bottomes.dart';
+import 'package:portfolio/presention/screen/home/widget/option.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -57,7 +59,31 @@ class CustomDrawer extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Bottomes(),
+                SizedBox(
+                  height: 25,
+                ),
+                Text(
+                  ' my name is Mafdy',
+                  style: Style.advenpro_25(),
+                ),
+                Text(
+                  'I’M A DEVELOPER',
+                  style: Style.montserrat_32(),
+                ),
+                SizedBox(
+                  height: 14,
+                ),
+                Image.asset(
+                  Assets.resourceImagesSeparatorWhite,
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Options(is_vertical: false)
               ],
             ),
           ),

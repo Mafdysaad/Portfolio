@@ -38,10 +38,10 @@ class _BottomesState extends State<Bottomes> {
                           textAlign: TextAlign.center,
                           bottoms[index],
                           style: _isClicked[index] || _isHovered[index]
-                              ? Style.soyombo18_sembold().copyWith(
+                              ? Style.montserrat_12().copyWith(
                                   color: Colors.black,
                                 )
-                              : Style.soyombo20_bold(),
+                              : Style.montserrat_12(),
                         ),
                       ),
                     ),

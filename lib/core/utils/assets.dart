@@ -19,5 +19,7 @@ class Assets {
   static const String resourceImagesMail = "assets/images/mail.png";
 
   static const String resourceImagesRectangle = "assets/images/Rectangle.png";
+
+  static const String resourceImagesSeparatorWhite = "assets/images/separatorWhite.png";
 }
 

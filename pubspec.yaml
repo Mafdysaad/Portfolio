@@ -70,6 +70,12 @@ flutter:
     - family: soyombo
       fonts:
         - asset: assets/fonts/soyombo.ttf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+    - family: Advent Pro
+      fonts:
+        - asset: assets/fonts/AdventPro_Expanded-Regular.ttf
         
   #
   # For details regarding fonts from package dependencies,

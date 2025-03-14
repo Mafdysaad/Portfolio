@@ -17,7 +17,9 @@ class Details extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Info(),
-              Options(),
+              Options(
+                is_vertical: true,
+              ),
             ],
           ),
         ),
