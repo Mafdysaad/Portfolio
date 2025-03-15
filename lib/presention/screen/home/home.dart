@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/presention/screen/home/widget/custom_drawer.dart';
+import 'package:portfolio/presention/screen/home/widget/drawer_ielements.dart';
+import 'package:portfolio/presention/screen/home/widget/logo_ielements.dart';
 
 import 'package:portfolio/presention/screen/home/widget/view_body.dart';
 
@@ -38,7 +40,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     return Scaffold(
         key: _scaffoldkey,
         //backgroundColor: Color(0xff0c0b0b),
-        drawer: CustomDrawer(),
+        drawer: CustomDrawer(
+          ielements: Drawerielements(),
+        ),
+        endDrawer: CustomDrawer(ielements: LogoIelements()),
         appBar: AppBar(
           leadingWidth: 100,
           toolbarHeight: 100,
@@ -48,13 +53,15 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(left: 24),
               child: Image.asset(Assets.resourceImagesCustomDrawer),
             ),
-            function: () => _scaffoldkey.currentState?.openDrawer(),
+            function: () => _scaffoldkey.currentState?.openEndDrawer(),
           ),
           actions: [
             Padding(
                 padding: EdgeInsets.only(right: 30),
                 child: AnimatedWrapper(
-                    child: SvgPicture.asset(Assets.resourceImagesDrawer)))
+                  child: SvgPicture.asset(Assets.resourceImagesDrawer),
+                  function: () => _scaffoldkey.currentState?.openDrawer(),
+                ))
           ],
         ),
         body: ViewBody(
