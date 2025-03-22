@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomSeptation extends StatelessWidget {
-  const CustomSeptation({super.key});
+class CustomSeparation extends StatelessWidget {
+  const CustomSeparation({super.key});
 
   @override
   Widget build(BuildContext context) {

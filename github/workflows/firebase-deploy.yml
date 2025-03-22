@@ -1,0 +1,34 @@
+name: Deploy Flutter Web to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main  # يعمل عند أي تعديل على الفرع الرئيسي
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ سحب الكود من GitHub
+        uses: actions/checkout@v3
+
+      - name: 🔧 تثبيت Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.x"
+
+      - name: 📦 تثبيت الـ Dependencies
+        run: flutter pub get
+
+      - name: 🚀 بناء تطبيق Flutter Web
+        run: flutter build web
+
+      - name: 🔥 تثبيت Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: 🔑 تسجيل الدخول إلى Firebase باستخدام Secret Key
+        run: firebase use --add mafdysaad-affa9 --token ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: 🌍 نشر الموقع على Firebase Hosting
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}

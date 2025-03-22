@@ -7,11 +7,7 @@ class Info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> info = [
-      'Hi, I am',
-      'Mafdy Saad',
-      'Front-end Developer / UI Designer'
-    ];
+    List<String> info = ['ci/cd', 'ci/cd', 'Front-end Developer / UI Designer'];
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 4,

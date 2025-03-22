@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:portfolio/core/utils/assets.dart';
 
-import 'package:portfolio/presention/screen/home/widget/drawer_ielements.dart';
-
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key, required this.ielements});
-  final Widget ielements;
+  const CustomDrawer({super.key, required this.items});
+  final Widget items;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,7 @@ class CustomDrawer extends StatelessWidget {
                   colors: [Colors.black, Color.fromARGB(2, 52, 51, 51)],
                 ),
               ),
-              child: ielements),
+              child: items),
         ),
       ],
     );

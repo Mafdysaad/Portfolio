@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/core/utils/fontstyle.dart';
-import 'package:portfolio/presention/screen/home/widget/Bottomes.dart';
-import 'package:portfolio/presention/screen/home/widget/custom_appbar.dart';
-import 'package:portfolio/presention/screen/home/widget/custom_septation.dart';
+
 import 'package:portfolio/presention/screen/home/widget/option.dart';
 
-class Drawerielements extends StatelessWidget {
-  const Drawerielements({super.key});
+class PersonalInfo extends StatelessWidget {
+  const PersonalInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CustomAppbar(),
-        CustomSeptation(),
-        SizedBox(
-          height: 10,
-        ),
-        Bottomes(),
-        SizedBox(
-          height: 25,
-        ),
         Text(
           ' my name is Mafdy',
           style: Style.advenpro_25(),

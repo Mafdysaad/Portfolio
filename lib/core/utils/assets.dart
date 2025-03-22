@@ -4,6 +4,8 @@ class Assets {
   
   static const String resourceImagesBackground = "assets/images/background.png";
 
+  static const String resourceImagesBlackrectangl = "assets/images/blackrectangl.png";
+
   static const String resourceImagesCustomDrawer = "assets/images/custom_drawer.png";
 
   static const String resourceImagesDrawer = "assets/images/drawer.svg";

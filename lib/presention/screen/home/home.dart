@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/presention/screen/home/widget/custom_drawer.dart';
-import 'package:portfolio/presention/screen/home/widget/drawer_ielements.dart';
-import 'package:portfolio/presention/screen/home/widget/logo_ielements.dart';
+import 'package:portfolio/presention/screen/home/widget/custom_enddrawer.dart';
+import 'package:portfolio/presention/screen/home/widget/drawer_items.dart';
+import 'package:portfolio/presention/screen/home/widget/personal_info.dart';
 
 import 'package:portfolio/presention/screen/home/widget/view_body.dart';
 
@@ -41,9 +42,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         key: _scaffoldkey,
         //backgroundColor: Color(0xff0c0b0b),
         drawer: CustomDrawer(
-          ielements: Drawerielements(),
+          items: DrawerItems(),
         ),
-        endDrawer: CustomDrawer(ielements: LogoIelements()),
+        endDrawer: CustomEnddrawer(),
         appBar: AppBar(
           leadingWidth: 100,
           toolbarHeight: 100,
