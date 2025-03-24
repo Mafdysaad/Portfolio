@@ -25,6 +25,9 @@ class _CustomBottomesState extends State<CustomBottomes> {
                   onTapUp: (event) => setState(() {
                     _isHovered[index] = false;
                   }),
+                  onTapCancel: () => setState(() {
+                    _isHovered[index] = false;
+                  }),
                   child: InkWell(
                     onTap: () => setState(() {
                       _isClicked[index] == true ? false : true;
