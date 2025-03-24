@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/utils/assets.dart';
-import 'package:portfolio/core/utils/fontstyle.dart';
-import 'package:portfolio/presention/screen/home/widget/bottomes.dart';
+
+import 'package:portfolio/presention/screen/home/widget/Bottomes.dart';
+
 import 'package:portfolio/presention/screen/home/widget/custom_appbar.dart';
 import 'package:portfolio/presention/screen/home/widget/custom_septation.dart';
-import 'package:portfolio/presention/screen/home/widget/option.dart';
+
 import 'package:portfolio/presention/screen/home/widget/personal_info.dart';
 
 class DrawerItems extends StatelessWidget {
@@ -20,7 +20,7 @@ class DrawerItems extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Bottomes(),
+        CustomBottomes(),
         SizedBox(
           height: 25,
         ),

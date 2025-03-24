@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:portfolio/core/utils/fontstyle.dart';
 
-class Bottomes extends StatefulWidget {
-  const Bottomes({super.key});
+class CustomBottomes extends StatefulWidget {
+  const CustomBottomes({super.key});
 
   @override
-  State<Bottomes> createState() => _BottomesState();
+  State<CustomBottomes> createState() => _CustomBottomesState();
 }
 
-class _BottomesState extends State<Bottomes> {
+class _CustomBottomesState extends State<CustomBottomes> {
   final List<bool> _isHovered = List.generate(5, (index) => false);
   final List<bool> _isClicked = List.generate(5, (index) => false);
   List<String> bottoms = ['About me', 'Skills', 'Portfolio', 'CONTACT ME'];
