@@ -18,11 +18,11 @@ class _CustomBottomesState extends State<CustomBottomes> {
     return Column(
         children: List.generate(
             bottoms.length,
-            (index) => MouseRegion(
-                  onEnter: (event) => setState(() {
+            (index) => GestureDetector(
+                  onDoubleTap: () => setState(() {
                     _isHovered[index] = true;
                   }),
-                  onExit: (event) => setState(() {
+                  onDoubleTapDown: (event) => setState(() {
                     _isHovered[index] = false;
                   }),
                   child: InkWell(
