@@ -24,7 +24,7 @@ class _AnimatedWrapperState extends State<AnimatedWrapper> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onPanUpdate: (_) => setState(() => scale = widget.scaleFactor),
+      onPanUpdate: (_dragupdate) => setState(() => scale = widget.scaleFactor),
       onPanEnd: (_) => setState(() => scale = 1.0),
       child: AnimatedContainer(
         duration: widget.duration,
