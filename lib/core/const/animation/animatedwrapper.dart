@@ -23,9 +23,9 @@ class _AnimatedWrapperState extends State<AnimatedWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => scale = widget.scaleFactor),
-      onExit: (_) => setState(() => scale = 1.0),
+    return GestureDetector(
+      onTapDown: (_) => setState(() => scale = widget.scaleFactor),
+      onTapUp: (_) => setState(() => scale = 1.0),
       child: AnimatedContainer(
         duration: widget.duration,
         transform: Matrix4.identity()..scale(scale),
