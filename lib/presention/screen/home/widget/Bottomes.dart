@@ -19,10 +19,10 @@ class _CustomBottomesState extends State<CustomBottomes> {
         children: List.generate(
             bottoms.length,
             (index) => GestureDetector(
-                  onDoubleTap: () => setState(() {
+                  onTapDown: (_) => setState(() {
                     _isHovered[index] = true;
                   }),
-                  onDoubleTapDown: (event) => setState(() {
+                  onTapUp: (event) => setState(() {
                     _isHovered[index] = false;
                   }),
                   child: InkWell(
