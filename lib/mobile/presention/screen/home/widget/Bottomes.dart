@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:portfolio/core/utils/fontstyle.dart';
+import 'package:portfolio/utils/fontstyle.dart';
 
 class CustomBottomes extends StatefulWidget {
   const CustomBottomes({super.key});
@@ -41,10 +41,10 @@ class _CustomBottomesState extends State<CustomBottomes> {
                           textAlign: TextAlign.center,
                           bottoms[index],
                           style: _isClicked[index] || _isHovered[index]
-                              ? Style.montserrat_12().copyWith(
+                              ? Style.montserrat_12(context).copyWith(
                                   color: Colors.black,
                                 )
-                              : Style.montserrat_12(),
+                              : Style.montserrat_12(context),
                         ),
                       ),
                     ),

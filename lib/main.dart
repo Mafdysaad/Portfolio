@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presention/screen/home/home.dart';
+
+import 'package:portfolio/home.dart';
 
 void main() {
   runApp(App());

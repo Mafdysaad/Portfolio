@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
-import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/utils/assets.dart';
 
 class Options extends StatelessWidget {
   const Options({super.key, required this.is_vertical});

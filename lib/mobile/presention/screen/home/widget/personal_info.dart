@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/utils/assets.dart';
-import 'package:portfolio/core/utils/fontstyle.dart';
 
-import 'package:portfolio/presention/screen/home/widget/option.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/option.dart';
+import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/utils/fontstyle.dart';
 
 class PersonalInfo extends StatelessWidget {
   const PersonalInfo({super.key});
@@ -15,11 +15,11 @@ class PersonalInfo extends StatelessWidget {
       children: [
         Text(
           ' my name is Mafdy',
-          style: Style.advenpro_25(),
+          style: Style.advenpro_25(context),
         ),
         Text(
           'I’M A DEVELOPER',
-          style: Style.montserrat_32(),
+          style: Style.montserrat_32(context),
         ),
         SizedBox(
           height: 14,

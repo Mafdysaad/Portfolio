@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:portfolio/core/utils/fontstyle.dart';
+import 'package:portfolio/utils/fontstyle.dart';
 
 class Info extends StatelessWidget {
   const Info({super.key});
@@ -19,8 +19,8 @@ class Info extends StatelessWidget {
             .map((item) => Text(
                   item,
                   style: item == 'Mafdy Saad'
-                      ? Style.soyombo20_bold()
-                      : Style.soyombo18_sembold(),
+                      ? Style.soyombo20_bold(context)
+                      : Style.soyombo18_sembold(context),
                 ))
             .toList());
   }

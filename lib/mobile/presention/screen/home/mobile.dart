@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
-import 'package:portfolio/core/utils/assets.dart';
-import 'package:portfolio/presention/screen/home/widget/custom_drawer.dart';
-import 'package:portfolio/presention/screen/home/widget/custom_enddrawer.dart';
-import 'package:portfolio/presention/screen/home/widget/drawer_items.dart';
-import 'package:portfolio/presention/screen/home/widget/personal_info.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_drawer.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_enddrawer.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/drawer_items.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/view_body.dart';
+import 'package:portfolio/utils/assets.dart';
 
-import 'package:portfolio/presention/screen/home/widget/view_body.dart';
-
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Mobile extends StatefulWidget {
+  const Mobile({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Mobile> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin {
+class _HomeState extends State<Mobile> with TickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> animation_1;
   late Animation<Offset> animation_2;

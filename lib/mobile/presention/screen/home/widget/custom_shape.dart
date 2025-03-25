@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/utils/assets.dart';
 
 class CustomShape extends StatelessWidget {
   const CustomShape({super.key, required this.animation});

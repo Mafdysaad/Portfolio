@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presention/screen/home/widget/Info.dart';
-import 'package:portfolio/presention/screen/home/widget/option.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/Info.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/option.dart';
 
 class Details extends StatelessWidget {
   const Details({super.key, required this.animation_2});
