@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_appbar.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_drawer.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_enddrawer.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/drawer_items.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/mobile_appbar.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/view_body.dart';
 import 'package:portfolio/utils/assets.dart';
 
@@ -38,30 +40,13 @@ class _HomeState extends State<Mobile> with TickerProviderStateMixin {
   Widget build(BuildContext mafdy) {
     return Scaffold(
         key: _scaffoldkey,
-        //backgroundColor: Color(0xff0c0b0b),
+        backgroundColor: Color(0xff0c0b0b),
         drawer: CustomDrawer(
           items: DrawerItems(),
         ),
         endDrawer: CustomEnddrawer(),
-        appBar: AppBar(
-          leadingWidth: 100,
-          toolbarHeight: 100,
-          backgroundColor: Color(0xff0c0b0b),
-          leading: AnimatedWrapper(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 24),
-              child: Image.asset(Assets.resourceImagesCustomDrawer),
-            ),
-            function: () => _scaffoldkey.currentState?.openEndDrawer(),
-          ),
-          actions: [
-            Padding(
-                padding: EdgeInsets.only(right: 30),
-                child: AnimatedWrapper(
-                  child: SvgPicture.asset(Assets.resourceImagesDrawer),
-                  function: () => _scaffoldkey.currentState?.openDrawer(),
-                ))
-          ],
+        appBar: MobileAppbar(
+          scaffoldkey: _scaffoldkey,
         ),
         body: ViewBody(
           animationController: animationController,
