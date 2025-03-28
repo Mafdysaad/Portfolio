@@ -18,8 +18,13 @@ class ViewBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(child: BackgroundImage()),
-        Positioned(bottom: 0, child: CustomShape(animation: animation_1)),
-        Positioned(bottom: 40, child: Details(animation_2: animation_2))
+        Positioned(
+            bottom: 0,
+            child: CustomShape(
+              animation: animation_1,
+              animation_2: animation_2,
+            )),
+        // Positioned(bottom: 40, child: Details(animation_2: animation_2))
       ],
     );
   }

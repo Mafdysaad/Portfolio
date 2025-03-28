@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_regtangle.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/details.dart';
 import 'package:portfolio/utils/assets.dart';
 
 class CustomShape extends StatelessWidget {
-  const CustomShape({super.key, required this.animation});
+  const CustomShape(
+      {super.key, required this.animation, required this.animation_2});
   final Animation<Offset> animation;
+  final Animation<Offset> animation_2;
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -14,9 +18,15 @@ class CustomShape extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: FittedBox(
                 fit: BoxFit.cover,
-                child: Image.asset(
-                    color: const Color.fromARGB(255, 123, 124, 124),
-                    Assets.resourceImagesRectangle))),
+                child: CustomRegtangle(
+                    higth: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 40,
+                      ),
+                      child: Details(animation_2: animation_2),
+                    )))),
       ),
     );
   }

@@ -13,14 +13,17 @@ class Details extends StatelessWidget {
         position: animation_2,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Info(),
-              Options(
-                is_vertical: true,
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Info(),
+                Options(
+                  is_vertical: true,
+                ),
+              ],
+            ),
           ),
         ),
       ),
