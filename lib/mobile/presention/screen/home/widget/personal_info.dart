@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:portfolio/mobile/presention/screen/home/widget/option.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation.dart';
 import 'package:portfolio/utils/assets.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
@@ -9,6 +8,12 @@ class PersonalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    @override
+    List<String> options = [
+      Assets.resourceImagesMail,
+      Assets.resourceImagesGethup,
+      Assets.resourceImagesLinkedin
+    ];
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,7 +35,11 @@ class PersonalInfo extends StatelessWidget {
         SizedBox(
           height: 18,
         ),
-        Options(is_vertical: false)
+        Opations(
+          list: List.generate(options.length,
+              (index) => Image.asset(width: 60, height: 60, options[index])),
+          isVertical: true,
+        )
       ],
     );
   }

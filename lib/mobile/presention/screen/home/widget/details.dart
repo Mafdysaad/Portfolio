@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/Info.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/option.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation.dart';
+import 'package:portfolio/utils/assets.dart';
+
+import 'package:portfolio/utils/inheritedwidget.dart';
 
 class Details extends StatelessWidget {
-  const Details({super.key, required this.animation_2});
-  final Animation<Offset> animation_2;
+  const Details({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
+    List<String> options = [
+      Assets.resourceImagesMail,
+      Assets.resourceImagesGethup,
+      Assets.resourceImagesLinkedin
+    ];
     return AnimatedBuilder(
-      animation: animation_2,
+      animation: Animationprovider.of(context)!.animation_2,
       builder: (context, child) => SlideTransition(
-        position: animation_2,
+        position: Animationprovider.of(context)!.animation_2,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Padding(
@@ -19,8 +29,12 @@ class Details extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Info(),
-                Options(
-                  is_vertical: true,
+                Opations(
+                  list: List.generate(
+                      options.length,
+                      (index) =>
+                          Image.asset(width: 60, height: 60, options[index])),
+                  isVertical: false,
                 ),
               ],
             ),

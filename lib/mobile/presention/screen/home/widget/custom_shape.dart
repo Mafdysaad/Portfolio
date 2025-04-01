@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_regtangle.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/details.dart';
 import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/utils/inheritedwidget.dart';
 
 class CustomShape extends StatelessWidget {
-  const CustomShape(
-      {super.key, required this.animation, required this.animation_2});
-  final Animation<Offset> animation;
-  final Animation<Offset> animation_2;
+  const CustomShape({super.key});
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: animation,
+      animation: Animationprovider.of(context)!.animation_1,
       builder: (context, child) => SlideTransition(
-        position: animation,
+        position: Animationprovider.of(context)!.animation_1,
         child: SizedBox(
             width: MediaQuery.of(context).size.width,
             child: FittedBox(
@@ -25,7 +23,7 @@ class CustomShape extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                         vertical: 40,
                       ),
-                      child: Details(animation_2: animation_2),
+                      child: Details(),
                     )))),
       ),
     );

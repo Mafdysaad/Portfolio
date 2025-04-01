@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:portfolio/core/const/animation/animatedwrapper.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/custom_appbar.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_drawer.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_enddrawer.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/drawer_items.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/mobile_appbar.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/view_body.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/utils/inheritedwidget.dart';
 
 class Mobile extends StatefulWidget {
   const Mobile({super.key});
@@ -21,7 +19,6 @@ class _HomeState extends State<Mobile> with TickerProviderStateMixin {
   late Animation<Offset> animation_1;
   late Animation<Offset> animation_2;
   late Tween<double> iconanmate;
-  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
   double target = 40;
   @override
@@ -38,26 +35,24 @@ class _HomeState extends State<Mobile> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext mafdy) {
-    return Scaffold(
-        key: _scaffoldkey,
-        backgroundColor: Color(0xff0c0b0b),
-        drawer: CustomDrawer(
-          items: DrawerItems(),
-        ),
-        endDrawer: CustomEnddrawer(),
-        appBar: MobileAppbar(
-          scaffoldkey: _scaffoldkey,
-        ),
-        body: ViewBody(
-          animationController: animationController,
-          animation_1: animation_1,
-          animation_2: animation_2,
-        ));
+    return Animationprovider(
+      animationController: animationController,
+      animation_1: animation_1,
+      animation_2: animation_2,
+      child: Scaffold(
+          backgroundColor: Color(0xff0c0b0b),
+          drawer: CustomDrawer(
+            items: DrawerItems(),
+          ),
+          endDrawer: CustomEnddrawer(),
+          appBar: MobileAppbar(),
+          body: ViewBody()),
+    );
   }
 
   initanimation() {
     animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 4))
+        AnimationController(vsync: this, duration: const Duration(seconds: 4))
           ..forward();
 
     animation_1 = Tween<Offset>(begin: Offset(0, 1.5), end: Offset(0, 0))

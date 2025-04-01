@@ -4,8 +4,9 @@ import 'package:portfolio/core/const/animation/animatedwrapper.dart';
 import 'package:portfolio/utils/assets.dart';
 
 class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const MobileAppbar({super.key, required this.scaffoldkey});
-  final GlobalKey<ScaffoldState> scaffoldkey;
+  const MobileAppbar({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +19,14 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.only(left: 24),
           child: Image.asset(Assets.resourceImagesCustomDrawer),
         ),
-        function: () => scaffoldkey.currentState?.openEndDrawer(),
+        function: () => Scaffold.of(context).openEndDrawer(),
       ),
       actions: [
         Padding(
             padding: EdgeInsets.only(right: 30),
             child: AnimatedWrapper(
               child: SvgPicture.asset(Assets.resourceImagesDrawer),
-              function: () => scaffoldkey.currentState?.openDrawer(),
+              function: () => Scaffold.of(context).openDrawer(),
             ))
       ],
     );
