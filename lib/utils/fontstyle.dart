@@ -44,4 +44,31 @@ abstract class Style {
       fontWeight: FontWeight.w600,
     );
   }
+
+  static TextStyle montserrat_25(context) {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: responsive_size(context, fontsize: 25),
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle montserrat_18(context) {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: responsive_size(context, fontsize: 18),
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle opeaSans_(context) {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: responsive_size(context, fontsize: 32),
+        fontFamily: 'OpenSans',
+        fontWeight: FontWeight.w700,
+        letterSpacing: 5);
+  }
 }

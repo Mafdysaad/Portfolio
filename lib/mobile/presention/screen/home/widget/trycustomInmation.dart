@@ -10,10 +10,10 @@ class Opations extends StatefulWidget {
 }
 
 class _TrycustominmationState extends State<Opations> {
-  final GlobalKey columnkey = GlobalKey();
+  final GlobalKey itemKey = GlobalKey();
   double itemHeight = 0;
   double itemWidth = 0;
-  int currentIndex = 0;
+  int currentIndex = -1;
 
   @override
   void initState() {
@@ -24,13 +24,14 @@ class _TrycustominmationState extends State<Opations> {
   }
 
   void initsize() {
-    columnkey.currentContext?.visitChildElements((element) {
-      RenderBox childRenderBox = element.findRenderObject() as RenderBox;
+    final context = itemKey.currentContext;
+    if (context != null) {
+      final box = context.findRenderObject() as RenderBox;
       setState(() {
-        itemHeight = childRenderBox.size.height;
-        itemWidth = childRenderBox.size.width;
+        itemHeight = box.size.height;
+        itemWidth = box.size.width;
       });
-    });
+    }
   }
 
   void _currentIndex(DragUpdateDetails details) {
@@ -58,23 +59,24 @@ class _TrycustominmationState extends State<Opations> {
       child: widget.isVertical
           ? Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              key: columnkey,
               children: List.generate(widget.list.length, (index) {
                 double scaleFactor = currentIndex == index ? 1.2 : 1;
                 return AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   transform: Matrix4.identity()..scale(scaleFactor),
+                  key: index == 0 ? itemKey : null, // 🔑 المفتاح لأول عنصر فقط
                   child: widget.list[index],
                 );
               }),
             )
           : Column(
-              key: columnkey,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(widget.list.length, (index) {
                 double scaleFactor = currentIndex == index ? 1.2 : 1;
                 return AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   transform: Matrix4.identity()..scale(scaleFactor),
+                  key: index == 0 ? itemKey : null,
                   child: widget.list[index],
                 );
               }),

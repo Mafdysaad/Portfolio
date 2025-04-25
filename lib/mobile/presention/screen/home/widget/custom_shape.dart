@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_regtangle.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/details.dart';
-import 'package:portfolio/utils/assets.dart';
+
 import 'package:portfolio/utils/inheritedwidget.dart';
 
 class CustomShape extends StatelessWidget {
@@ -10,8 +10,9 @@ class CustomShape extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: Animationprovider.of(context)!.animation_1,
-      builder: (context, child) => SlideTransition(
-        position: Animationprovider.of(context)!.animation_1,
+      builder: (context, child) => AnimatedPositioned(
+        bottom: Animationprovider.of(context)!.animation_1.value.distance,
+        duration: Duration(microseconds: 300),
         child: SizedBox(
             width: MediaQuery.of(context).size.width,
             child: FittedBox(

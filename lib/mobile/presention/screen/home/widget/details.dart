@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/Info.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation.dart';
+
 import 'package:portfolio/utils/assets.dart';
 
 import 'package:portfolio/utils/inheritedwidget.dart';
@@ -34,7 +35,6 @@ class Details extends StatelessWidget {
                       options.length,
                       (index) =>
                           Image.asset(width: 60, height: 60, options[index])),
-                  isVertical: false,
                 ),
               ],
             ),
