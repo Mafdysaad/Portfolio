@@ -36,6 +36,25 @@ abstract class Style {
     );
   }
 
+  static TextStyle montserrat_14(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 14),
+      fontFamily: 'Montserrat',
+      letterSpacing: 5,
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle montserrat_17_bold(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 17),
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w800,
+    );
+  }
+
   static TextStyle montserrat_32(context) {
     return TextStyle(
       color: Colors.white,
@@ -43,6 +62,24 @@ abstract class Style {
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w600,
     );
+  }
+
+  static TextStyle montserrat_30_bold(context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: responsive_size(context, fontsize: 32),
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w700,
+        letterSpacing: 7);
+  }
+
+  static TextStyle montserrat_24_regular(context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: responsive_size(context, fontsize: 25),
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w400,
+        letterSpacing: 5);
   }
 
   static TextStyle montserrat_25(context) {
@@ -63,12 +100,39 @@ abstract class Style {
     );
   }
 
-  static TextStyle opeaSans_(context) {
+  static TextStyle opeaSans_32(context) {
     return TextStyle(
         color: Colors.white,
         fontSize: responsive_size(context, fontsize: 32),
         fontFamily: 'OpenSans',
         fontWeight: FontWeight.w700,
         letterSpacing: 5);
+  }
+
+  static TextStyle opeaSans_13(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 13),
+      fontFamily: 'OpenSans',
+      fontWeight: FontWeight.w300,
+    );
+  }
+
+  static TextStyle opeaSans_14(context) {
+    return TextStyle(
+        color: Colors.white,
+        fontSize: responsive_size(context, fontsize: 14),
+        fontFamily: 'OpenSans',
+        fontWeight: FontWeight.w700,
+        letterSpacing: 5);
+  }
+
+  static TextStyle opeaSans_15_regular(context) {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: responsive_size(context, fontsize: 14),
+      fontFamily: 'OpenSans',
+      fontWeight: FontWeight.w400,
+    );
   }
 }
