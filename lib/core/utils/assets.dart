@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String resourceImagesAa = "assets/images/aa.png";
+
   static const String resourceImagesAndrid = "assets/images/andrid.svg";
 
   static const String resourceImagesBackground = "assets/images/background.png";
@@ -23,6 +25,9 @@ class Assets {
 
   static const String resourceImagesExit = "assets/images/Exit.svg";
 
+  static const String resourceImagesFINALPAGROUND =
+      "assets/images/FINALPAGROUND.png";
+
   static const String resourceImagesFinal = "assets/images/final.png";
 
   static const String resourceImagesFirebas = "assets/images/firebas.svg";
@@ -31,9 +36,18 @@ class Assets {
 
   static const String resourceImagesFlutter = "assets/images/flutter.svg";
 
+  static const String resourceImagesFlutterLogo =
+      "assets/images/flutter_logo.png";
+
   static const String resourceImagesGethup = "assets/images/gethup.png";
 
+  static const String resourceImagesGh = "assets/images/gh.png";
+
   static const String resourceImagesGit = "assets/images/git.svg";
+
+  static const String resourceImagesHg = "assets/images/hg.png";
+
+  static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 
   static const String resourceImagesItbackground =
       "assets/images/itbackground.png";
@@ -47,6 +61,9 @@ class Assets {
   static const String resourceImagesMantinace = "assets/images/mantinace.png";
 
   static const String resourceImagesMysql = "assets/images/mysql.svg";
+
+  static const String resourceImagesPortfoliobackground =
+      "assets/images/portfoliobackground.svg";
 
   static const String resourceImagesRectangle = "assets/images/Rectangle.png";
 

@@ -16,14 +16,14 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Color(0xff0c0b0b),
       leading: AnimatedWrapper(
         child: Padding(
-          padding: const EdgeInsets.only(left: 24),
-          child: Image.asset(Assets.resourceImagesCustomDrawer),
+          padding: const EdgeInsets.only(left: 24, top: 10),
+          child: Image.asset("assets/images/flutter_logo.png"),
         ),
         function: () => Scaffold.of(context).openEndDrawer(),
       ),
       actions: [
         Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.only(right: 30, top: 10),
             child: AnimatedWrapper(
               child: SvgPicture.asset(Assets.resourceImagesDrawer),
               function: () => Scaffold.of(context).openDrawer(),

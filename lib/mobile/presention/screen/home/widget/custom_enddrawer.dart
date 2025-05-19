@@ -42,7 +42,7 @@ class _MyWidgetState extends State<CustomEnddrawer> {
           ),
         ),
         Buildpage(
-          backgroundImage: 'assets/images/itbackground.png',
+          backgroundImage: "assets/images/FINALPAGROUND.png",
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Introdection(),
