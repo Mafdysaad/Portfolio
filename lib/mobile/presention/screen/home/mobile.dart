@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_drawer.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_enddrawer.dart';
@@ -40,6 +41,7 @@ class _HomeState extends State<Mobile> with TickerProviderStateMixin {
       animation_1: animation_1,
       animation_2: animation_2,
       child: Scaffold(
+          key: ScrollService().scaffoldKey,
           backgroundColor: Color(0xff0c0b0b),
           drawer: CustomDrawer(
             items: DrawerItems(),

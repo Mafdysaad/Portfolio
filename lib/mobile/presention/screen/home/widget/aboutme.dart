@@ -9,10 +9,15 @@ import 'package:portfolio/mobile/presention/screen/home/widget/paragraph.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
 class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+  const AboutMe({
+    super.key,
+  });
+  static GlobalKey aboutme = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: aboutme,
       children: [
         SizedBox(
           height: 70,

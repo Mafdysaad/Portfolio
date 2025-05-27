@@ -1,10 +1,14 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/introdection.dart';
 import 'package:portfolio/utils/assets.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/personal_info.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
+final ItemScrollController scrollController = ItemScrollController();
 
 class CustomEnddrawer extends StatefulWidget {
   const CustomEnddrawer({
@@ -30,32 +34,34 @@ class _MyWidgetState extends State<CustomEnddrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Column(
-      children: [
-        Buildpage(
-          backgroundImage: Assets.resourceImagesBackground,
-          child: AnimatedOpacity(
-            opacity: _opacity,
-            duration: Duration(milliseconds: 500),
-            child: PersonalInfo(),
+    final List<Widget Function()> pages = [
+      () => Buildpage(
+            backgroundImage: Assets.resourceImagesBackground,
+            child: AnimatedOpacity(
+              opacity: _opacity,
+              duration: Duration(milliseconds: 500),
+              child: PersonalInfo(),
+            ),
           ),
-        ),
-        Buildpage(
-          backgroundImage: "assets/images/FINALPAGROUND.png",
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Introdection(),
+      () => Buildpage(
+            backgroundImage: "assets/images/FINALPAGROUND.png",
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Introdection(),
+            ),
           ),
-        ),
-        Buildpage(
-          backgroundColor: Color(0Xffd7d7d7),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: AboutMe(),
+      () => Buildpage(
+            backgroundColor: Color(0Xffd7d7d7),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: AboutMe(),
+            ),
           ),
-        ),
-      ],
-    ));
+    ];
+    return ScrollablePositionedList.builder(
+      itemBuilder: (context, index) => pages[index](),
+      itemCount: pages.length,
+      itemScrollController: ScrollService().drawerScrollController,
+    );
   }
 }

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
+import 'package:portfolio/core/function/navgatdrawer.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_enddrawer.dart';
 
 import 'package:portfolio/utils/fontstyle.dart';
 
@@ -29,9 +33,21 @@ class _CustomBottomesState extends State<CustomBottomes> {
                     _isHovered[index] = false;
                   }),
                   child: InkWell(
-                    onTap: () => setState(() {
-                      _isClicked[index] == true ? false : true;
-                    }),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      WidgetsBinding.instance.addPostFrameCallback((_) {
+                        ScrollService()
+                            .scaffoldKey
+                            .currentState
+                            ?.openEndDrawer();
+                        Future.delayed(Duration(milliseconds: 300), () {
+                          ScrollService().scrollToSection(index);
+                        });
+                      });
+                      setState(() {
+                        _isClicked[index] == true ? false : true;
+                      });
+                    },
                     child: Container(
                       height: 57,
                       color: _isHovered[index] ? Colors.white : null,
