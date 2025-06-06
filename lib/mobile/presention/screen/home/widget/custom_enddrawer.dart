@@ -1,10 +1,13 @@
-import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/const/scrollcontroller.dart';
+import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/Bottomes.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/introdection.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/portofolio.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/personal_info.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -56,6 +59,24 @@ class _MyWidgetState extends State<CustomEnddrawer> {
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: AboutMe(),
             ),
+          ),
+      () => Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(
+                    Assets.resourceImagesPortfoliobackground,
+                  ),
+                  fit: BoxFit.cover)),
+          child: Padding(
+            padding: const EdgeInsets.all(40),
+            child: CustomButtom(
+              title: "Portofilio",
+            ),
+          )),
+      () => Container(
+            color: Color.fromARGB(255, 26, 26, 26),
+            child: Portofolio(),
           ),
     ];
     return ScrollablePositionedList.builder(

@@ -9,6 +9,8 @@ class Assets {
   static const String resourceImagesBlackrectangl =
       "assets/images/blackrectangl.png";
 
+  static const String resourceImagesChatapp = "assets/images/chatapp.png";
+
   static const String resourceImagesCustomDrawer =
       "assets/images/custom_drawer.png";
 
@@ -43,6 +45,8 @@ class Assets {
 
   static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 
+  static const String resourceImagesIbmapp = "assets/images/ibmapp.png";
+
   static const String resourceImagesKotlin = "assets/images/kotlin.svg";
 
   static const String resourceImagesLinkedin = "assets/images/linkedin.png";
@@ -54,7 +58,7 @@ class Assets {
   static const String resourceImagesMysql = "assets/images/mysql.svg";
 
   static const String resourceImagesPortfoliobackground =
-      "assets/images/portfoliobackground.svg";
+      "assets/images/portfoliobackground.png";
 
   static const String resourceImagesRectangle = "assets/images/Rectangle.png";
 
@@ -67,4 +71,8 @@ class Assets {
       "assets/images/separatorWhite.png";
 
   static const String resourceImagesVector = "assets/images/Vector.svg";
+
+  static const String resourceImagesWaterapp = "assets/images/waterapp.png";
+
+  static const String resourceImagesWhaterap = "assets/images/whaterap.png";
 }
