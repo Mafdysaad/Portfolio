@@ -4,8 +4,10 @@ import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/Bottomes.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/contact.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/introdection.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/lastsection.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/portofolio.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/personal_info.dart';
@@ -77,6 +79,12 @@ class _MyWidgetState extends State<CustomEnddrawer> {
       () => Container(
             color: Color.fromARGB(255, 26, 26, 26),
             child: Portofolio(),
+          ),
+      () => Buildpage(backgroundColor: Color(0Xffd7d7d7), child: Contact()),
+      () => Container(
+            width: double.infinity,
+            color: Colors.black,
+            child: Lastsection(),
           ),
     ];
     return ScrollablePositionedList.builder(

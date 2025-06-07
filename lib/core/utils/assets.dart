@@ -4,6 +4,8 @@ class Assets {
 
   static const String resourceImagesAndrid = "assets/images/andrid.svg";
 
+  static const String resourceImagesArrow = "assets/images/arrow.svg";
+
   static const String resourceImagesBackground = "assets/images/background.png";
 
   static const String resourceImagesBlackrectangl =
@@ -13,6 +15,14 @@ class Assets {
 
   static const String resourceImagesCustomDrawer =
       "assets/images/custom_drawer.png";
+
+  static const String resourceImagesCustomfacebook =
+      "assets/images/customfacebook.svg";
+
+  static const String resourceImagesCustomlikedin =
+      "assets/images/customlikedin.svg";
+
+  static const String resourceImagesCustommail = "assets/images/custommail.svg";
 
   static const String resourceImagesDart = "assets/images/dart.svg";
 
@@ -27,6 +37,8 @@ class Assets {
 
   static const String resourceImagesFINALPAGROUND =
       "assets/images/FINALPAGROUND.png";
+
+  static const String resourceImagesFacbook = "assets/images/facbook.svg";
 
   static const String resourceImagesFinal = "assets/images/final.png";
 

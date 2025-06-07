@@ -18,7 +18,7 @@ class Portofolio extends StatelessWidget {
             (index) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height * .4,
+                    height: MediaQuery.of(context).size.height * .3,
                     width: double.infinity,
                     child: Image.asset(
                       photo[index],

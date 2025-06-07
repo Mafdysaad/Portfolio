@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/core/const/animation/animatedwrapper.dart';
-import 'package:portfolio/utils/assets.dart';
+
+import '../../../../../core/utils/assets.dart';
 
 class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
   const MobileAppbar({
@@ -11,8 +12,8 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 100,
-      toolbarHeight: 100,
+      leadingWidth: 120,
+      toolbarHeight: 120,
       backgroundColor: Color(0xff0c0b0b),
       leading: AnimatedWrapper(
         child: Padding(
