@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/assets.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_logo.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
@@ -10,6 +11,10 @@ class Skills extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40),
+          child: CustomButtom(title: 'SKILLs'),
+        ),
         Text(
           'USING NOW:',
           style: Style.montserrat_30_bold(context),

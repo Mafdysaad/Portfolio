@@ -25,17 +25,24 @@ class Details extends StatelessWidget {
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Padding(
-            padding: const EdgeInsets.only(top: 10.0),
+            padding: const EdgeInsets.only(top: 45),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                SizedBox(
+                  width: 25,
+                ),
                 Info(),
+                Spacer(),
                 Opations(
                   list: List.generate(
                       options.length,
                       (index) =>
                           Image.asset(width: 60, height: 60, options[index])),
                 ),
+                SizedBox(
+                  width: 25,
+                )
               ],
             ),
           ),

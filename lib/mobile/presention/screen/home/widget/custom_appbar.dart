@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/core/utils/assets.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({super.key});
@@ -9,12 +9,16 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.black,
-        height: 70,
+        height: 60,
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 30),
-              child: Image.asset(Assets.resourceImagesCustomDrawer),
+              padding: const EdgeInsets.only(left: 30, bottom: 5, top: 5),
+              child: InkWell(
+                  onTap: () {
+                    Scaffold.of(context).openEndDrawer();
+                  },
+                  child: Image.asset(Assets.resourceImagesFlutterlogo)),
             ),
             Spacer(),
             Padding(

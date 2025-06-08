@@ -18,7 +18,7 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
       leading: AnimatedWrapper(
         child: Padding(
           padding: const EdgeInsets.only(left: 24, top: 10),
-          child: Image.asset("assets/images/flutterlogo.png"),
+          child: Image.asset(Assets.resourceImagesFlutterlogo),
         ),
         function: () => Scaffold.of(context).openEndDrawer(),
       ),
