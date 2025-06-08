@@ -19,6 +19,7 @@ class _CustomBottomesState extends State<CustomBottomes> {
   List<String> bottoms = ['About me', 'Skills', 'Portfolio', 'CONTACT ME'];
   @override
   Widget build(BuildContext context) {
+    int currentindex = 0;
     return Column(
         children: List.generate(
             bottoms.length,
@@ -35,18 +36,22 @@ class _CustomBottomesState extends State<CustomBottomes> {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).pop();
+                      setState(() {
+                        _isClicked[index] == true ? false : true;
+                        currentindex = index + 2;
+                      });
+
                       WidgetsBinding.instance.addPostFrameCallback((_) {
                         ScrollService()
                             .scaffoldKey
                             .currentState
                             ?.openEndDrawer();
                         Future.delayed(Duration(milliseconds: 300), () {
-                          ScrollService().scrollToSection(index);
+                          ScrollService().scrollToSection(currentindex);
                         });
                       });
-                      setState(() {
-                        _isClicked[index] == true ? false : true;
-                      });
+                      print('current index =$currentindex');
+                      print('index =$index');
                     },
                     child: Container(
                       height: 57,
