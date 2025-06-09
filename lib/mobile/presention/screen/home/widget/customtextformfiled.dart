@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Customtextformfiled extends StatelessWidget {
-  const Customtextformfiled({super.key, required this.hint, this.higth});
+  const Customtextformfiled(
+      {super.key, required this.hint, this.higth, required this.typeofkeborad});
   final String hint;
   final double? higth;
+  final TextInputType typeofkeborad;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +18,9 @@ class Customtextformfiled extends StatelessWidget {
       )),
       child: Padding(
         padding: const EdgeInsets.only(left: 10),
-        child: TextField(
+        child: TextFormField(
           maxLines: higth == null ? 1 : null,
-          keyboardType: higth == null ? null : TextInputType.multiline,
+          keyboardType: typeofkeborad,
           textInputAction: higth == null ? null : TextInputAction.newline,
           decoration: InputDecoration(
             border: InputBorder.none,

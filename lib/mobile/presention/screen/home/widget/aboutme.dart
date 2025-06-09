@@ -25,7 +25,7 @@ class AboutMe extends StatelessWidget {
         ),
         Paragraph(
           text:
-              'He my name is mafdt  and i have two years of experance into flutter developer at spyway company im working there for two years as flutter deveopler and im deveolped many project by using flutter such as bookly app,parry app and more',
+              'Hi, I\'m Mafdy, a passionate Flutter Developer based in the UAE. My journey into software development started with a strong interest in design and user experience. I chose Flutter because I love how it allows me to build beautiful apps that run smoothly on both mobile and web.Over time, I’ve gained experience in state management (Cubit), clean architecture (MVVM), Firebase, REST APIs, and even PHP/SQL on the back-end.',
           color: Colors.black,
         ),
         SizedBox(
@@ -33,7 +33,7 @@ class AboutMe extends StatelessWidget {
         ),
         Paragraph(
           text:
-              'He my name is mafdt  and i have two years of experance into flutter developer at spyway company im working there for two years as flutter deveopler and im deveolped many project by using flutter such as bookly app,parry app and more',
+              'I enjoy learning new technologies and constantly improving my skills. Whether it\'s deploying apps using Firebase Hosting, setting up CI/CD pipelines with GitHub Actions, or polishing UI details – I give attention to every part of the development process.I\’m now looking to join a creative team where I can grow and make real impact as a developer',
           color: Colors.black,
         ),
         SizedBox(
@@ -52,16 +52,19 @@ class AboutMe extends StatelessWidget {
         ),
         CustomParagraph(
             image: Assets.resourceImagesDesign,
-            title: 'hhhhhh',
-            text: 'developed and desinge any desinar'),
+            title: 'DESIGN',
+            text:
+                'I can design the website based on your needs and suggestions. I can also create it from scratch by consulting with you during work.'),
         CustomParagraph(
             image: Assets.resourceImagesMantinace,
-            title: 'hhhhhh',
-            text: 'developed and desinge any desinar'),
+            title: 'MAINTENANCE',
+            text:
+                'In case of any problems or the need for changes, I can introduce new functionalities and solutions.'),
         CustomParagraph(
             image: Assets.resourceImagesDevelopment,
-            title: 'hhhhhh',
-            text: 'developed and desinge any desinar'),
+            title: 'DEVELOPMENT',
+            text:
+                'Based on a project created by me or another one, sent by you, I can program the website to be fully functional and responsive.'),
         SizedBox(
           height: 30,
         ),

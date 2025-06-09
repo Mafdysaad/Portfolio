@@ -20,7 +20,7 @@ class Introdection extends StatelessWidget {
         ),
         Paragraph(
           text:
-              'He my name is mafdt  and i have two years of experance into flutter developer at spyway company im working there for two years as flutter deveopler and im deveolped many project by using flutter such as bookly app,parry app and more ',
+              'My name is Mafdy, and I am a Flutter Developer with experience in building responsive and scalable mobile and web applications using Flutter and Dart. I follow clean architecture patterns such as MVVM and use Cubit for state management. I have hands-on experience with Firebase services (Authentication, Firestore, Hosting) and integrate RESTful APIs efficiently.I\'m also familiar with PHP and SQL for back-end development and have experience deploying projects using Firebase Hosting and automating tasks with GitHub Actions (CI/CD). ',
           color: Colors.white,
         ),
         SizedBox(

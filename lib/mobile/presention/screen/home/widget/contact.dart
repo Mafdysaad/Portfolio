@@ -21,21 +21,33 @@ class Contact extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 50),
             child: Paragraph(
-                text: 'hdhh shsdhs ahhdsa ahashdshs', color: Colors.black),
+                text:
+                    'My name is Mafdy, and I\’m a graduate of the Egyptian E-Learning University, Faculty of Computer Science. I have a strong interest in software development and specialize in building cross-platform applications using Flutter and Dart',
+                color: Colors.black),
           ),
           Image.asset(Assets.resourceImagesSeparatorBlack),
           Padding(
             padding: const EdgeInsets.only(top: 50, bottom: 50),
-            child: Customtextformfiled(hint: 'ENTER YOUR NAME*'),
+            child: Customtextformfiled(
+              hint: 'ENTER YOUR NAME*',
+              typeofkeborad: TextInputType.text,
+            ),
           ),
-          Customtextformfiled(hint: 'ENTER YOUR EMAIL*'),
+          Customtextformfiled(
+            hint: 'ENTER YOUR EMAIL*',
+            typeofkeborad: TextInputType.emailAddress,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 50),
-            child: Customtextformfiled(hint: 'PHONE NUMBER'),
+            child: Customtextformfiled(
+              hint: 'PHONE NUMBER',
+              typeofkeborad: TextInputType.phone,
+            ),
           ),
           Customtextformfiled(
             hint: 'YOUR MESSAGE*',
             higth: 200,
+            typeofkeborad: TextInputType.multiline,
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 30, top: 70),
