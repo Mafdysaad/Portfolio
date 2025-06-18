@@ -14,6 +14,7 @@ class _TrycustominmationState extends State<Mobilehovereffect> {
   List<String> bottoms = ['About me', 'Skills', 'Portfolio', 'CONTACT ME'];
 
   int currentIndex = -1;
+  int pageNumber = -1;
 
   void _currentIndex(DragUpdateDetails details) {
     int newIndex = 0;
@@ -35,13 +36,14 @@ class _TrycustominmationState extends State<Mobilehovereffect> {
                   onTap: () {
                     Navigator.of(context).pop();
                     setState(() {
-                      currentIndex = index + 2;
+                      pageNumber = index + 2;
+                      currentIndex = index;
                     });
 
                     WidgetsBinding.instance.addPostFrameCallback((_) {
                       ScrollService().scaffoldKey.currentState?.openEndDrawer();
                       Future.delayed(Duration(milliseconds: 300), () {
-                        ScrollService().scrollToSection(currentIndex);
+                        ScrollService().scrollToSection(pageNumber);
                       });
                     });
                     print('current index =$currentIndex');
@@ -50,7 +52,7 @@ class _TrycustominmationState extends State<Mobilehovereffect> {
                     onPanUpdate: _currentIndex,
                     child: Container(
                       alignment: Alignment.center,
-                      height: MediaQuery.of(context).size.height * .15,
+                      height: 57,
                       color: currentIndex == index ? Colors.white : null,
                       width: double.infinity,
                       child: Text(
