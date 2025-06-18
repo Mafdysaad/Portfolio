@@ -35,13 +35,14 @@ class PersonalInfo extends StatelessWidget {
         SizedBox(
           height: 18,
         ),
-        Opations(
-          list: List.generate(
-              options.length,
-              (index) => SizedBox(
-                  width: 60,
-                  child: Image.asset(width: 60, height: 60, options[index]))),
-          isVertical: true,
+        Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * .2),
+          child: Opations(
+            list: List.generate(options.length,
+                (index) => Image.asset(width: 60, height: 60, options[index])),
+            isVertical: true,
+          ),
         )
       ],
     );

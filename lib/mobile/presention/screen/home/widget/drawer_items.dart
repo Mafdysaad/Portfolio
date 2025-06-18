@@ -4,6 +4,7 @@ import 'package:portfolio/mobile/presention/screen/home/widget/Bottomes.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_appbar.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_septation.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/mobilehoverEffect.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/personal_info.dart';
 
@@ -20,7 +21,8 @@ class DrawerItems extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        CustomBottomes(),
+        //CustomBottomes(),
+        Mobilehovereffect(),
         SizedBox(
           height: 25,
         ),
