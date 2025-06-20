@@ -13,7 +13,7 @@ class _TrycustominmationState extends State<Mobilehovereffect> {
   final GlobalKey itemKey = GlobalKey();
   List<String> bottoms = ['About me', 'Skills', 'Portfolio', 'CONTACT ME'];
 
-  int currentIndex = -1;
+  int currentIndex = 0;
   int pageNumber = -1;
 
   void _currentIndex(DragUpdateDetails details) {
