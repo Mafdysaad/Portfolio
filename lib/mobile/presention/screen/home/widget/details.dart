@@ -5,6 +5,7 @@ import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation
 import 'package:portfolio/utils/assets.dart';
 
 import 'package:portfolio/utils/inheritedwidget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Details extends StatelessWidget {
   const Details({
@@ -37,8 +38,21 @@ class Details extends StatelessWidget {
                 Opations(
                   list: List.generate(
                       options.length,
-                      (index) =>
-                          Image.asset(width: 60, height: 60, options[index])),
+                      (index) => InkWell(
+                          onTap: () {
+                            index == 1
+                                ? launchUrl(
+                                    Uri.parse('https://github.com/Mafdysaad'))
+                                : index == 2
+                                    ? launchUrl(Uri.parse(
+                                        'https://www.linkedin.com/in/mafdy-saad-a9b149199'))
+                                    : launchUrl(Uri(
+                                        scheme: 'mailto',
+                                        path: 'mafdysaad366@gmail.com',
+                                        query: '&body=Hi Mafdy,'));
+                          },
+                          child: Image.asset(
+                              width: 60, height: 60, options[index]))),
                 ),
                 SizedBox(
                   width: 25,

@@ -11,6 +11,8 @@ class Assets {
   static const String resourceImagesBlackrectangl =
       "assets/images/blackrectangl.png";
 
+  static const String resourceImagesBookelyapp = "assets/images/bookelyapp.png";
+
   static const String resourceImagesChatapp = "assets/images/chatapp.png";
 
   static const String resourceImagesCustomDrawer =
@@ -85,6 +87,4 @@ class Assets {
   static const String resourceImagesVector = "assets/images/Vector.svg";
 
   static const String resourceImagesWaterapp = "assets/images/waterapp.png";
-
-  static const String resourceImagesWhaterap = "assets/images/whaterap.png";
 }

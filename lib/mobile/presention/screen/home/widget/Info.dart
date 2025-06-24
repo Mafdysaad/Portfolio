@@ -9,44 +9,48 @@ class Info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Row(children: [
-        Text(
-          'HEY THERE',
-          style: Style.soyombo18_sembold(context),
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Text(
-          '👋',
-          style: Style.soyombo18_sembold(context),
-        )
-            .animate(
-                onPlay: (controller) =>
-                    controller.repeat(period: Duration(seconds: 2)))
-            .shake(
-                hz: 4,
-                duration: Duration(milliseconds: 500),
-                curve: Curves.easeInOut)
-      ]),
-      Text(
-        'Mafdy Saad',
-        style: Style.soyombo20_bold(context),
-      ),
-      AnimatedTextKit(
-          pause: Duration(
-            milliseconds: 1200,
-          ),
-          repeatForever: true,
-          animatedTexts: [
-            TyperAnimatedText('Senior Flutter Developer',
-                speed: Duration(milliseconds: 60),
-                textStyle: Style.soyombo18_sembold(context)),
-            TyperAnimatedText('At Platform Technologies',
-                speed: Duration(milliseconds: 60),
-                textStyle: Style.soyombo18_sembold(context))
+    return Column(
+        spacing: 10,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Text(
+              'HEY THERE',
+              style: Style.soyombo18_sembold(context),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              '👋',
+              style: Style.soyombo18_sembold(context),
+            )
+                .animate(
+                    onPlay: (controller) =>
+                        controller.repeat(period: Duration(seconds: 2)))
+                .shake(
+                    hz: 10,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOut)
           ]),
-    ]);
+          Text(
+            'Mafdy Saad',
+            style: Style.soyombo20_bold(context),
+          ),
+          AnimatedTextKit(
+              pause: Duration(
+                milliseconds: 1200,
+              ),
+              repeatForever: true,
+              animatedTexts: [
+                TyperAnimatedText('Senior Flutter Developer',
+                    speed: Duration(milliseconds: 60),
+                    textStyle: Style.soyombo18_sembold(context).copyWith()),
+                TyperAnimatedText('At Platform Technologies',
+                    speed: Duration(milliseconds: 60),
+                    textStyle: Style.soyombo18_sembold(context))
+              ]),
+        ]);
   }
 }

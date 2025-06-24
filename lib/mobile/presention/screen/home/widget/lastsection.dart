@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/utils/fontstyle.dart';
 
@@ -20,7 +23,11 @@ class Lastsection extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        SvgPicture.asset(Assets.resourceImagesArrow),
+        InkWell(
+            onTap: () {
+              ScrollService().scrollToSection(1);
+            },
+            child: SvgPicture.asset(Assets.resourceImagesArrow)),
         SizedBox(
           height: 10,
         ),
