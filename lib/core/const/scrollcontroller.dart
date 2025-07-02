@@ -19,7 +19,7 @@ class ScrollService {
       drawerScrollController.scrollTo(
         index: index,
         duration: Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
+        curve: Curves.linear,
       );
     }
   }

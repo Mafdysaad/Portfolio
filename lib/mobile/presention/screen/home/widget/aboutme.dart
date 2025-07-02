@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dart';
@@ -42,6 +43,7 @@ class AboutMe extends StatelessWidget {
         Edgbuttom(
           title: 'EXPLOR',
           color: Colors.black,
+          ontap: () => ScrollService().scrollToSection(3),
         ),
         SizedBox(
           height: 40,

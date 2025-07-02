@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/edgbuttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/paragraph.dart';
 import 'package:portfolio/utils/fontstyle.dart';
@@ -29,6 +30,7 @@ class Introdection extends StatelessWidget {
         Edgbuttom(
           title: 'MORE',
           color: Colors.white,
+          ontap: () => ScrollService().scrollToSection(2),
         )
       ],
     );

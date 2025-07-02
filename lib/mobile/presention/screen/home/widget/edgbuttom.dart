@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
 class Edgbuttom extends StatelessWidget {
-  const Edgbuttom({super.key, required this.title, required this.color});
+  const Edgbuttom(
+      {super.key, required this.title, required this.color, this.ontap});
   final String title;
   final Color color;
+  final Function()? ontap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: ontap,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 30),
         child: SizedBox(
