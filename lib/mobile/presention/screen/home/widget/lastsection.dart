@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/utils/fontstyle.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/utils/assets.dart';
 
@@ -48,15 +49,34 @@ class Lastsection extends StatelessWidget {
                     child: SizedBox(
                       width: 40,
                       height: 40,
-                      child: SvgPicture.asset(
-                        options[index],
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        onTap: () {
+                          index == 0
+                              ? launchUrl(Uri.parse(
+                                  'https://www.facebook.com/mafdy.saad.7'))
+                              : index == 1
+                                  ? launchUrl(Uri.parse(
+                                      'https://www.linkedin.com/in/mafdy-saad-a9b149199'))
+                                  : launchUrl(Uri(
+                                      scheme: 'mailto',
+                                      path: 'mafdysaad366@gmail.com',
+                                      query: '&body=Hi Mafdy,'));
+                        },
+                        child: SvgPicture.asset(
+                          options[index],
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   )),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              launchUrl(
+                  Uri.parse(
+                      'https://github.com/Mafdysaad/Portfolio/raw/main/mafdysaad_cv.pdf'),
+                  mode: LaunchMode.externalApplication);
+            },
             child: Text(
               'download My Cv .... ',
               textAlign: TextAlign.left,
