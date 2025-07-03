@@ -30,7 +30,6 @@ class CutRectanglePainter extends CustomPainter {
     path.moveTo(0, size.height);
     path.lineTo(0, size.height * .4);
     path.lineTo(size.width, 0);
-    path.lineTo(size.width, 0);
     path.lineTo(size.width, size.height);
     path.close();
     canvas.drawPath(path, paint);

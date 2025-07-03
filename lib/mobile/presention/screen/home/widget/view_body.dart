@@ -14,8 +14,9 @@ class ViewBody extends StatelessWidget {
       children: [
         Positioned.fill(
             child: Image(
+                alignment: Alignment.centerRight,
                 image: AssetImage(Assets.resourceImagesFinal),
-                fit: BoxFit.cover)),
+                fit: BoxFit.contain)),
         CustomShape(),
       ],
     );

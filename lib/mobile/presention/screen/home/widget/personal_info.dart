@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation.dart';
-import 'package:portfolio/utils/assets.dart';
+
 import 'package:portfolio/utils/fontstyle.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,9 +13,9 @@ class PersonalInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     @override
     List<String> options = [
-      Assets.resourceImagesMail,
-      Assets.resourceImagesGethup,
-      Assets.resourceImagesLinkedin
+      Assets.resourceImagesMailu,
+      Assets.resourceImagesGithup,
+      Assets.resourceImagesLinkedinu
     ];
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +32,7 @@ class PersonalInfo extends StatelessWidget {
         SizedBox(
           height: 14,
         ),
-        Image.asset(
+        SvgPicture.asset(
           Assets.resourceImagesSeparatorWhite,
         ),
         SizedBox(

@@ -20,12 +20,7 @@ class CustomShape extends StatelessWidget {
                 child: CustomRegtangle(
                     higth: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.width,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 40,
-                      ),
-                      child: Details(),
-                    )))),
+                    child: Details()))),
       ),
     );
   }

@@ -60,7 +60,7 @@ class _TrycustominmationState extends State<Opations> {
       onPanUpdate: _currentIndex,
       child: widget.isVertical
           ? Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: List.generate(widget.list.length, (index) {
                 double scaleFactor = currentIndex == index ? 1.2 : 1;
                 return Expanded(
@@ -75,7 +75,8 @@ class _TrycustominmationState extends State<Opations> {
               }),
             )
           : Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
+              spacing: 20,
               children: List.generate(widget.list.length, (index) {
                 double scaleFactor = currentIndex == index ? 1.2 : 1;
                 return AnimatedContainer(

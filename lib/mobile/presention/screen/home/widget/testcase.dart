@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/const/scrollcontroller.dart';
-import 'package:portfolio/core/utils/assets.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/Bottomes.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/Introdactionsection.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/aboutmesection.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/contact.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/customportfilio.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/introdection.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/lastsection.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/personalinfo.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/portofolio.dart';
 
-import 'package:portfolio/mobile/presention/screen/home/widget/personal_info.dart';
-import 'package:portfolio/mobile/presention/screen/home/widget/skills.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/skillssection.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 

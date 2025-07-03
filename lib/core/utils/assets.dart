@@ -57,6 +57,8 @@ class Assets {
 
   static const String resourceImagesGit = "assets/images/git.svg";
 
+  static const String resourceImagesGithup = "assets/images/githup.svg";
+
   static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 
   static const String resourceImagesIbmapp = "assets/images/ibmapp.png";
@@ -65,7 +67,11 @@ class Assets {
 
   static const String resourceImagesLinkedin = "assets/images/linkedin.png";
 
+  static const String resourceImagesLinkedinu = "assets/images/linkedinu.svg";
+
   static const String resourceImagesMail = "assets/images/mail.png";
+
+  static const String resourceImagesMailu = "assets/images/mailu.svg";
 
   static const String resourceImagesMantinace = "assets/images/mantinace.png";
 

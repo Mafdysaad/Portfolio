@@ -69,55 +69,58 @@ class _PortofolioState extends State<Portofolio> {
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
-              child: AnimatedContainer(
-                duration: 300.ms,
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * .3,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    if (index == currentIndex)
-                      BoxShadow(
-                        color: Colors.blue.withOpacity(0.3),
-                        blurRadius: 16,
-                        offset: const Offset(0, 6),
-                      )
-                  ],
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(project.image),
+              child: AspectRatio(
+                aspectRatio: 6 / 3,
+                child: AnimatedContainer(
+                  duration: 300.ms,
+                  //  width: double.infinity,
+
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      if (index == currentIndex)
+                        BoxShadow(
+                          color: Colors.blue.withOpacity(0.3),
+                          blurRadius: 16,
+                          offset: const Offset(0, 6),
+                        )
+                    ],
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(project.image),
+                    ),
                   ),
-                ),
-                child: Stack(
-                  children: [
-                    if (index == currentIndex)
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.75),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              project.Name,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                  child: Stack(
+                    children: [
+                      if (index == currentIndex)
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.75),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                project.Name,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              project.discraption,
-                              style: const TextStyle(color: Colors.white70),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ).animate().fadeIn().slideY(begin: 0.2),
-                      ),
-                  ],
+                              const SizedBox(height: 8),
+                              Text(
+                                project.discraption,
+                                style: const TextStyle(color: Colors.white70),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ).animate().fadeIn().slideY(begin: 0.2),
+                        ),
+                    ],
+                  ),
                 ),
               ),
             ),

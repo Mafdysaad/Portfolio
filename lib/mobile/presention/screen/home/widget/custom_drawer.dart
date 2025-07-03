@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/assets.dart';
+import 'package:portfolio/core/utils/assets.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key, required this.items});
