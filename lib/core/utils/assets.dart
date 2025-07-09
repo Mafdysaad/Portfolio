@@ -11,6 +11,8 @@ class Assets {
   static const String resourceImagesBlackrectangl =
       "assets/images/blackrectangl.png";
 
+  static const String resourceImagesBody = "assets/images/body.png";
+
   static const String resourceImagesBookelyapp = "assets/images/bookelyapp.png";
 
   static const String resourceImagesChatapp = "assets/images/chatapp.png";
@@ -44,6 +46,9 @@ class Assets {
 
   static const String resourceImagesFinal = "assets/images/final.png";
 
+  static const String resourceImagesFinalmobile =
+      "assets/images/finalmobile.png";
+
   static const String resourceImagesFirebas = "assets/images/firebas.svg";
 
   static const String resourceImagesFirebase = "assets/images/firebase.svg";
@@ -62,6 +67,9 @@ class Assets {
   static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 
   static const String resourceImagesIbmapp = "assets/images/ibmapp.png";
+
+  static const String resourceImagesItfordesktop =
+      "assets/images/itfordesktop.svg";
 
   static const String resourceImagesKotlin = "assets/images/kotlin.svg";
 

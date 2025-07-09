@@ -135,4 +135,31 @@ abstract class Style {
       fontWeight: FontWeight.w400,
     );
   }
+
+  static TextStyle Raleway_40_regular(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 40),
+      fontFamily: 'raleway',
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle Raleway_80_regular(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 80),
+      fontFamily: 'raleway',
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle Raleway_25_regular(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: responsive_size(context, fontsize: 25),
+      fontFamily: 'raleway',
+      fontWeight: FontWeight.w800,
+    );
+  }
 }

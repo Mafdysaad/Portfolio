@@ -18,14 +18,20 @@ class CustomAppbar extends StatelessWidget {
                   onTap: () {
                     Scaffold.of(context).openEndDrawer();
                   },
-                  child: Image.asset(Assets.resourceImagesFlutterlogo)),
+                  child: Image.asset(
+                      height: MediaQuery.of(context).size.height * .04,
+                      width: MediaQuery.of(context).size.width * .04,
+                      Assets.resourceImagesFlutterlogo)),
             ),
             Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 17),
               child: InkWell(
                   onTap: () => Scaffold.of(context).closeDrawer(),
-                  child: SvgPicture.asset(Assets.resourceImagesExit)),
+                  child: SvgPicture.asset(
+                      height: MediaQuery.of(context).size.height * .04,
+                      width: MediaQuery.of(context).size.width * .04,
+                      Assets.resourceImagesExit)),
             )
           ],
         ));

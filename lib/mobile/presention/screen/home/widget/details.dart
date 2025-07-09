@@ -17,7 +17,7 @@ class Details extends StatelessWidget {
     List<String> options = [
       Assets.resourceImagesMailu,
       Assets.resourceImagesGithup,
-      Assets.resourceImagesLinkedinu
+      Assets.resourceImagesLinkedinu,
     ];
     return AnimatedBuilder(
       animation: Animationprovider.of(context)!.animation_2,

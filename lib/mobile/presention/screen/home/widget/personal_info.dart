@@ -56,7 +56,10 @@ class PersonalInfo extends StatelessWidget {
                                   path: 'mafdysaad366@gmail.com',
                                   query: '&body=Hi Mafdy,'));
                     },
-                    child: Image.asset(width: 60, height: 60, options[index]))),
+                    child: SvgPicture.asset(
+                        width: MediaQuery.of(context).size.width * .04,
+                        height: MediaQuery.of(context).size.height * .04,
+                        options[index]))),
             isVertical: true,
           ),
         )

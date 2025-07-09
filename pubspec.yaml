@@ -73,13 +73,16 @@ flutter:
         - asset: assets/fonts/soyombo.ttf
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/montserrat.regular.ttf
     - family: Advent Pro
       fonts:
         - asset: assets/fonts/AdventPro_Expanded-Regular.ttf
     - family: OpenSans
       fonts:
-        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf      
+    - family: raleway
+      fonts:
+        - asset: assets/fonts/raleway.regular.ttf      
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:
