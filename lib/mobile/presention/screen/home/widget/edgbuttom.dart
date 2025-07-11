@@ -3,9 +3,14 @@ import 'package:portfolio/utils/fontstyle.dart';
 
 class Edgbuttom extends StatelessWidget {
   const Edgbuttom(
-      {super.key, required this.title, required this.color, this.ontap});
+      {super.key,
+      required this.title,
+      required this.color,
+      this.ontap,
+      this.isdisktop = false});
   final String title;
   final Color color;
+  final bool isdisktop;
   final Function()? ontap;
 
   @override
@@ -16,7 +21,8 @@ class Edgbuttom extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 30),
         child: SizedBox(
             child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment:
+              isdisktop ? MainAxisAlignment.start : MainAxisAlignment.center,
           children: [
             Container(
               width: 2,

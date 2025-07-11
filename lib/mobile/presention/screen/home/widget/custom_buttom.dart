@@ -3,7 +3,9 @@ import 'package:portfolio/utils/fontstyle.dart';
 
 class CustomButtom extends StatelessWidget {
   final String title;
-  const CustomButtom({super.key, required this.title});
+  final TextStyle? style;
+
+  const CustomButtom({super.key, required this.title, this.style});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class CustomButtom extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
             child: Text(
               title,
-              style: Style.montserrat_14(context),
+              style: style,
             ),
           ),
         ));

@@ -62,7 +62,7 @@ class Assets {
 
   static const String resourceImagesGit = "assets/images/git.svg";
 
-  static const String resourceImagesGithup = "assets/images/githup.svg";
+  static const String resourceImagesGithupu = "assets/images/githup.svg";
 
   static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 

@@ -145,16 +145,16 @@ abstract class Style {
     );
   }
 
-  static TextStyle Raleway_80_regular(context) {
+  static TextStyle Raleway_80_bold(context) {
     return TextStyle(
       color: Colors.black,
       fontSize: responsive_size(context, fontsize: 80),
       fontFamily: 'raleway',
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w900,
     );
   }
 
-  static TextStyle Raleway_25_regular(context) {
+  static TextStyle Raleway_25_extrabold(context) {
     return TextStyle(
       color: Colors.black,
       fontSize: responsive_size(context, fontsize: 25),

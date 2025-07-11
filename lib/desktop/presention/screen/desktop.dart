@@ -1,70 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/desktop/presention/screen/widget/custom_buttom.dart';
-import 'package:portfolio/desktop/presention/screen/widget/leftsection.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
+import 'package:portfolio/desktop/presention/screen/widget/homepage.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
 
-import 'package:portfolio/desktop/presention/screen/widget/rigthsection.dart';
-
-import '../../../core/utils/assets.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class Desktop extends StatelessWidget {
   const Desktop({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final width = constraints.maxWidth;
-                final height = constraints.maxHeight;
-
-                return Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        color: const Color(0xffD7D7D7),
-                        padding: const EdgeInsets.symmetric(horizontal: 40),
-                        child: const Leftsection(),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: ClipPath(
-                        clipper: CutRectangleClipper(),
-                        child: Rigthsection(
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 130, top: 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                const CustomButtom(),
-                                Expanded(
-                                  child: Image.asset(
-                                    Assets.resourceImagesFinal,
-                                    fit: BoxFit.cover,
-                                    alignment: Alignment.center,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-              },
+    final List<Widget Function()> pages = [
+      () => Homepage(),
+      () => Buildpage(
+            backgroundColor: Color(0Xffd7d7d7),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: AboutMe(
+                isdesktop: true,
+              ),
             ),
           ),
-          Container(
-            width: double.infinity,
-            height: 180,
-            color: Colors.black,
-          ),
-        ],
+    ];
+    return Scaffold(
+      backgroundColor: const Color(0xffD7D7D7),
+      body: ScrollablePositionedList.builder(
+        itemCount: pages.length,
+        itemBuilder: (context, index) => pages[index](),
+        itemScrollController: ScrollService().drawerScrollController,
       ),
     );
   }

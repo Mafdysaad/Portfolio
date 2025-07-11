@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Data/modle/aboutme.dart';
 import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/core/utils/assets.dart';
@@ -7,20 +8,43 @@ import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dar
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_paragraph.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/edgbuttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/paragraph.dart';
+import 'package:portfolio/utils/fontstyle.dart';
 
 class AboutMe extends StatelessWidget {
-  const AboutMe({
-    super.key,
-  });
+  final bool isdesktop;
+  const AboutMe({super.key, required this.isdesktop});
 
   @override
   Widget build(BuildContext context) {
+    List<Aboutmeparagraph> list = [
+      Aboutmeparagraph(
+          image: Assets.resourceImagesDesign,
+          text:
+              'I can design the website based on your needs and suggestions. I can also create it from scratch by consulting with you during work.',
+          title: 'DESIGN'),
+      Aboutmeparagraph(
+          image: Assets.resourceImagesMantinace,
+          text:
+              'In case of any problems or the need for changes, I can introduce new functionalities and solutions.',
+          title: 'MAINTENANCE'),
+      Aboutmeparagraph(
+          image: Assets.resourceImagesDevelopment,
+          text:
+              'Based on a project created by me or another one, sent by you, I can program the website to be fully functional and responsive.',
+          title: 'DEVELOPMENT'),
+    ];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
           height: 70,
         ),
-        CustomButtom(title: 'ABOUT ME'),
+        CustomButtom(
+          title: 'ABOUT ME',
+          style: isdesktop
+              ? Style.montserrat_30_bold(context)
+              : Style.montserrat_14(context),
+        ),
         SizedBox(
           height: 45,
         ),
@@ -52,21 +76,27 @@ class AboutMe extends StatelessWidget {
         SizedBox(
           height: 60,
         ),
-        CustomParagraph(
-            image: Assets.resourceImagesDesign,
-            title: 'DESIGN',
-            text:
-                'I can design the website based on your needs and suggestions. I can also create it from scratch by consulting with you during work.'),
-        CustomParagraph(
-            image: Assets.resourceImagesMantinace,
-            title: 'MAINTENANCE',
-            text:
-                'In case of any problems or the need for changes, I can introduce new functionalities and solutions.'),
-        CustomParagraph(
-            image: Assets.resourceImagesDevelopment,
-            title: 'DEVELOPMENT',
-            text:
-                'Based on a project created by me or another one, sent by you, I can program the website to be fully functional and responsive.'),
+        Wrap(
+          spacing: 20,
+          alignment: WrapAlignment.center,
+          runSpacing: 40,
+          children: List.generate(
+              list.length,
+              (index) => SizedBox(
+                    width: isdesktop
+                        ? MediaQuery.of(context).size.width * .4
+                        : null,
+                    child: CustomParagraph(
+                      image: list[index].image,
+                      text: list[index].text,
+                      title: list[index].title,
+                      titlestyle: isdesktop
+                          ? Style.montserrat_18(context)
+                              .copyWith(fontSize: 22, color: Colors.black)
+                          : Style.montserrat_17_bold(context),
+                    ),
+                  )),
+        ),
         SizedBox(
           height: 30,
         ),

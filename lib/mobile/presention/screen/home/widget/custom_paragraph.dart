@@ -7,8 +7,10 @@ class CustomParagraph extends StatelessWidget {
       {super.key,
       required this.image,
       required this.text,
-      required this.title});
+      required this.title,
+      required this.titlestyle});
   final String title, text, image;
+  final TextStyle titlestyle;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class CustomParagraph extends StatelessWidget {
           Image.asset(image),
           Text(
             title,
-            style: Style.montserrat_17_bold(context),
+            style: titlestyle,
           ),
         ]),
         Padding(

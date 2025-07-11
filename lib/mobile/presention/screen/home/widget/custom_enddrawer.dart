@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/const/scrollcontroller.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/Introdactionsection.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/aboutme.dart';
 
-import 'package:portfolio/mobile/presention/screen/home/widget/aboutmesection.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/buildpage.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/contact.dart';
 
@@ -44,7 +44,15 @@ class _MyWidgetState extends State<CustomEnddrawer> {
     final List<Widget Function()> pages = [
       () => Personalinfo(opacity: _opacity),
       () => Introdactionsection(),
-      () => Aboutmesection(),
+      () => Buildpage(
+            backgroundColor: Color(0Xffd7d7d7),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: AboutMe(
+                isdesktop: false,
+              ),
+            ),
+          ),
       () => Skillssection(),
       () => Customportfilio(),
       () => Buildpage(backgroundColor: Color(0Xffd7d7d7), child: Contact()),

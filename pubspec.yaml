@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_text_kit: ^4.2.3
+  auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.8
   expandable_page_view: ^1.0.17
   flutter:
@@ -79,10 +80,10 @@ flutter:
         - asset: assets/fonts/AdventPro_Expanded-Regular.ttf
     - family: OpenSans
       fonts:
-        - asset: assets/fonts/OpenSans-Regular.ttf      
+        - asset: assets/fonts/OpenSans-Regular.ttf
     - family: raleway
       fonts:
-        - asset: assets/fonts/raleway.regular.ttf      
+        - asset: assets/fonts/raleway.regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:
