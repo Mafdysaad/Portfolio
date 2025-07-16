@@ -11,8 +11,8 @@ import 'package:portfolio/mobile/presention/screen/home/widget/customportfilio.d
 
 import 'package:portfolio/mobile/presention/screen/home/widget/lastsection.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/personalinfo.dart';
+import 'package:portfolio/mobile/presention/screen/home/widget/skills.dart';
 
-import 'package:portfolio/mobile/presention/screen/home/widget/skillssection.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 final ItemScrollController scrollController = ItemScrollController();
@@ -53,9 +53,17 @@ class _MyWidgetState extends State<CustomEnddrawer> {
               ),
             ),
           ),
-      () => Skillssection(),
-      () => Customportfilio(),
-      () => Buildpage(backgroundColor: Color(0Xffd7d7d7), child: Contact()),
+      () => Skills(
+            isdesktop: false,
+          ),
+      () => Customportfilio(
+            isdesktop: false,
+          ),
+      () => Buildpage(
+          backgroundColor: Color(0Xffd7d7d7),
+          child: Contact(
+            isdescktop: false,
+          )),
       () => Container(
             width: double.infinity,
             color: Colors.black,

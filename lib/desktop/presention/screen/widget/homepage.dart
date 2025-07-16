@@ -25,7 +25,7 @@ class Homepage extends StatelessWidget {
               children: [
                 /// LEFT SECTION
                 Flexible(
-                  flex: 1,
+                  flex: 2,
                   fit: FlexFit.tight,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 120),
@@ -35,7 +35,7 @@ class Homepage extends StatelessWidget {
 
                 /// RIGHT SECTION
                 Flexible(
-                  flex: 3,
+                  flex: 5,
                   fit: FlexFit.tight,
                   child: Rightsection().animate().slide(
                       begin: Offset(0, -1),

@@ -9,10 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdabtiveLayout(
         MobileLayout: (context) => Mobile(),
-        TablietLayout: (context) => Container(
-              color: Colors.white,
-              child: Text('TablietLayout'),
-            ),
+        TablietLayout: (context) => Desktop(),
         DesktopLayout: (context) => Desktop());
   }
 }

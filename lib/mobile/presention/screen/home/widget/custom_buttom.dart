@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/fontstyle.dart';
 
 class CustomButtom extends StatelessWidget {
   final String title;
-  final TextStyle? style;
+  final TextStyle style;
 
-  const CustomButtom({super.key, required this.title, this.style});
+  const CustomButtom({super.key, required this.title, required this.style});
 
   @override
   Widget build(BuildContext context) {

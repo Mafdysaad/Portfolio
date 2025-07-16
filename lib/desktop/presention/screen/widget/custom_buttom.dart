@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/const/scrollcontroller.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
 class CustomButtom extends StatefulWidget {
@@ -21,18 +22,21 @@ class _CustomButtomState extends State<CustomButtom> {
                   onHover: (event) => setState(() {
                     currentindex = index;
                   }),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: currentindex == index ? Colors.white : null),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(list[index],
-                          style: Style.montserrat_17_bold(context).copyWith(
-                              color: currentindex == index
-                                  ? Colors.black
-                                  : Colors.white,
-                              letterSpacing: 1)),
+                  child: InkWell(
+                    onTap: () => ScrollService().scrollToSection(index + 1),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: currentindex == index ? Colors.white : null),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(list[index],
+                            style: Style.montserrat_17_bold(context).copyWith(
+                                color: currentindex == index
+                                    ? Colors.black
+                                    : Colors.white,
+                                letterSpacing: 1)),
+                      ),
                     ),
                   ),
                 )));

@@ -11,7 +11,7 @@ class Paragraph extends StatelessWidget {
     return Text(
       text,
       style: Style.opeaSans_15_regular(context).copyWith(color: color),
-      textAlign: TextAlign.justify,
+      textAlign: TextAlign.center,
     );
   }
 }

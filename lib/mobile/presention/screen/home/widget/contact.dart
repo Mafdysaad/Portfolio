@@ -5,9 +5,11 @@ import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dar
 import 'package:portfolio/mobile/presention/screen/home/widget/customtextformfiled.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/edgbuttom.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/paragraph.dart';
+import 'package:portfolio/utils/fontstyle.dart';
 
 class Contact extends StatefulWidget {
-  const Contact({super.key});
+  const Contact({super.key, required this.isdescktop});
+  final bool isdescktop;
 
   @override
   State<Contact> createState() => _ContactState();
@@ -30,12 +32,18 @@ class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * .25),
       child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 50),
-            child: CustomButtom(title: 'CONTACT'),
+            child: CustomButtom(
+              title: 'CONTACT',
+              style: widget.isdescktop
+                  ? Style.montserrat_30_bold(context)
+                  : Style.montserrat_14(context),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 50),

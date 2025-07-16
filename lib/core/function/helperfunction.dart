@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 Future<void> sendemail(
     contex, String phone, String name, String massage, String number) async {
@@ -19,4 +20,8 @@ Future<void> sendemail(
     ScaffoldMessenger.of(contex)
         .showSnackBar(SnackBar(content: Text('Failed to send message.')));
   }
+}
+
+Future<void> navgetUrl(String url) async {
+  await launchUrl(Uri.parse(url));
 }

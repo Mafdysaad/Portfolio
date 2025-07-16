@@ -1,11 +1,16 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/core/function/helperfunction.dart';
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/utils/fontstyle.dart';
+import 'package:portfolio/utils/size_config.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Leftsection extends StatelessWidget {
-  const Leftsection({super.key});
+  const Leftsection({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -49,17 +54,37 @@ class Leftsection extends StatelessWidget {
         ),
         Row(
           children: List.generate(list.length, (index) {
-            return Padding(
-              padding: const EdgeInsets.all(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xffC4C4C4),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(
-                    list[index],
-                    color: Colors.black,
+            return Expanded(
+              flex: 1,
+              child: Padding(
+                padding: EdgeInsetsGeometry.all(10),
+                child: InkWell(
+                  onTap: () => index == 0
+                      ? launchUrl(Uri.parse('https://github.com/Mafdysaad'))
+                      : index == 1
+                          ? launchUrl(Uri(
+                              scheme: 'mailto',
+                              path: 'mafdysaad366@gmail.com',
+                              query: '&body=Hi Mafdy,'))
+                          : launchUrl(Uri.parse(
+                              'https://www.linkedin.com/in/mafdy-saad-a9b149199')),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xffC4C4C4),
+                    ),
+                    child: Padding(
+                      padding:
+                          MediaQuery.of(context).size.width < SizeConfig.desctop
+                              ? EdgeInsets.all(1)
+                              : EdgeInsetsGeometry.all(4),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          fit: BoxFit.contain,
+                          list[index],
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),

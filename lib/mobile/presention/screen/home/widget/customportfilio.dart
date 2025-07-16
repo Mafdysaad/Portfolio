@@ -5,7 +5,8 @@ import 'package:portfolio/mobile/presention/screen/home/widget/portofolio.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
 class Customportfilio extends StatelessWidget {
-  const Customportfilio({super.key});
+  const Customportfilio({super.key, required this.isdesktop});
+  final bool isdesktop;
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +24,18 @@ class Customportfilio extends StatelessWidget {
               padding: const EdgeInsets.all(40),
               child: CustomButtom(
                 title: "Portofilio",
+                style: isdesktop
+                    ? Style.montserrat_30_bold(context)
+                    : Style.montserrat_14(context),
               ),
             )),
         Container(
           color: Color.fromARGB(255, 26, 26, 26),
           child: Column(
             children: [
-              Portofolio(),
+              Portofolio(
+                isdisktop: isdesktop,
+              ),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(

@@ -42,7 +42,7 @@ abstract class Style {
       fontSize: responsive_size(context, fontsize: 14),
       fontFamily: 'Montserrat',
       letterSpacing: 5,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.bold,
     );
   }
 

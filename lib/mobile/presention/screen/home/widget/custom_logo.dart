@@ -16,8 +16,8 @@ class CustomLogo extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * .4,
-            height: MediaQuery.of(context).size.height * .3,
+            width: 180,
+            height: 200,
             child: SvgPicture.asset(
               Assetsname,
               fit: BoxFit.fitWidth,
