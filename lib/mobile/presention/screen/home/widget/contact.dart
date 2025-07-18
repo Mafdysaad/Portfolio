@@ -32,8 +32,10 @@ class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * .25),
+      padding: widget.isdescktop
+          ? EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * .25)
+          : EdgeInsetsGeometry.symmetric(horizontal: 20),
       child: Column(
         children: [
           Padding(
