@@ -12,9 +12,9 @@ class ScrollService {
   ScrollService._internal();
 
   // 4️⃣ الكنترولر نفسه
-  final ItemScrollController drawerScrollController = ItemScrollController();
+  static ItemScrollController drawerScrollController = ItemScrollController();
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  void scrollToSection(int index) {
+  static scrollToSection(int index) {
     if (drawerScrollController.isAttached) {
       drawerScrollController.scrollTo(
         index: index,

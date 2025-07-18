@@ -23,10 +23,8 @@ class Footersection extends StatelessWidget {
                 spacing: 10,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Flexible(
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
                       'Flutter Developer',
                       style: Style.montserrat_30_bold(context)

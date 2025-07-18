@@ -37,10 +37,14 @@ class Homepage extends StatelessWidget {
                 Flexible(
                   flex: 5,
                   fit: FlexFit.tight,
-                  child: Rightsection().animate().slide(
-                      begin: Offset(0, -1),
-                      end: Offset.zero,
-                      duration: Duration(seconds: 2)),
+                  child: Rightsection()
+                      .animate(
+                        onPlay: (controller) => controller.forward(),
+                      )
+                      .slide(
+                          begin: Offset(0, -1),
+                          end: Offset.zero,
+                          duration: Duration(seconds: 2)),
                 ),
               ],
             ),
@@ -50,8 +54,14 @@ class Homepage extends StatelessWidget {
           Expanded(
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.4,
-              child: Footersection().animate().slide(
-                  begin: Offset(0, 1), end: Offset.zero, duration: 2.seconds),
+              child: Footersection()
+                  .animate(
+                    onPlay: (controller) => controller.forward(),
+                  )
+                  .slide(
+                      begin: Offset(0, 1),
+                      end: Offset.zero,
+                      duration: 2.seconds),
             ),
           ),
         ],

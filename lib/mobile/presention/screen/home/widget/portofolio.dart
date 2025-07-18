@@ -45,7 +45,7 @@ class _PortofolioState extends State<Portofolio> {
       image: Assets.resourceImagesWaterapp,
       url: 'https://github.com/Mafdysaad/Weather_app.git',
       discraption:
-          'A Flutter-based weather app that fetches real-time data using WeatherAPI and manages state with Cubit.',
+          'A simple and responsive weather app that shows real-time weather data based on the user’s location using Google API. Managed app states using Cubit for clean and maintainable code',
     ),
     Projects(
       Name: 'Portfolio Website',
