@@ -67,7 +67,7 @@ abstract class Style {
   static TextStyle montserrat_30_bold(context) {
     return TextStyle(
         color: Colors.black,
-        fontSize: responsive_size(context, fontsize: 32),
+        fontSize: responsive_size(context, fontsize: 30),
         fontFamily: 'Montserrat',
         fontWeight: FontWeight.w700,
         letterSpacing: 7);

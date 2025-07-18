@@ -52,6 +52,7 @@ class AboutMe extends StatelessWidget {
           text:
               'Hi, I\'m Mafdy, a passionate Flutter Developer based in the UAE. My journey into software development started with a strong interest in design and user experience. I chose Flutter because I love how it allows me to build beautiful apps that run smoothly on both mobile and web.Over time, I’ve gained experience in state management (Cubit), clean architecture (MVVM), Firebase, REST APIs, and even PHP/SQL on the back-end.',
           color: Colors.black,
+          textalign: TextAlign.center,
         ),
         SizedBox(
           height: 15,
@@ -60,6 +61,7 @@ class AboutMe extends StatelessWidget {
           text:
               'I enjoy learning new technologies and constantly improving my skills. Whether it\'s deploying apps using Firebase Hosting, setting up CI/CD pipelines with GitHub Actions, or polishing UI details – I give attention to every part of the development process.I\’m now looking to join a creative team where I can grow and make real impact as a developer',
           color: Colors.black,
+          textalign: TextAlign.center,
         ),
         SizedBox(
           height: 30,
@@ -67,7 +69,7 @@ class AboutMe extends StatelessWidget {
         Edgbuttom(
           title: 'EXPLOR',
           color: Colors.black,
-          ontap: () => ScrollService().scrollToSection(3),
+          ontap: () => ScrollService.scrollToSection(3),
         ),
         SizedBox(
           height: 40,

@@ -30,7 +30,6 @@ class Skills extends StatelessWidget {
                       textAlign: TextAlign.start,
                       style: Style.montserrat_30_bold(context),
                     ),
-                    Spacer()
                   ],
                 )
               : Text(
@@ -43,6 +42,7 @@ class Skills extends StatelessWidget {
           ),
           isdesktop
               ? Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.start,
                   children: [
                     CustomLogo(
                         Assetsname: Assets.resourceImagesFlutter,

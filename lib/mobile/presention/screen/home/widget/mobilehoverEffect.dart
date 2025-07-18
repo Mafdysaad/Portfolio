@@ -43,7 +43,7 @@ class _TrycustominmationState extends State<Mobilehovereffect> {
                     WidgetsBinding.instance.addPostFrameCallback((_) {
                       ScrollService().scaffoldKey.currentState?.openEndDrawer();
                       Future.delayed(Duration(milliseconds: 300), () {
-                        ScrollService().scrollToSection(pageNumber);
+                        ScrollService.scrollToSection(pageNumber);
                       });
                     });
                     print('current index =$currentIndex');

@@ -52,7 +52,7 @@ class Desktop extends StatelessWidget {
       body: ScrollablePositionedList.builder(
         itemCount: pages.length,
         itemBuilder: (context, index) => pages[index](),
-        itemScrollController: ScrollService().drawerScrollController,
+        itemScrollController: ScrollService.drawerScrollController,
       ),
     );
   }

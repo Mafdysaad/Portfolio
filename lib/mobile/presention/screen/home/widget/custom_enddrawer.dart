@@ -73,7 +73,7 @@ class _MyWidgetState extends State<CustomEnddrawer> {
     return ScrollablePositionedList.builder(
       itemBuilder: (context, index) => pages[index](),
       itemCount: pages.length,
-      itemScrollController: ScrollService().drawerScrollController,
+      itemScrollController: ScrollService.drawerScrollController,
     );
   }
 }

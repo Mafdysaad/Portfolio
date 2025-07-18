@@ -15,7 +15,7 @@ class Leftsection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> list = [
-      Assets.resourceImagesGithupu,
+      Assets.resourceImagesGithup,
       Assets.resourceImagesMailu,
       Assets.resourceImagesLinkedinu
     ];

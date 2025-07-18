@@ -20,44 +20,40 @@ class Footersection extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Column(
+                spacing: 10,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
-                  Expanded(
+                  Flexible(
                     child: Text(
-                      'IT BERRIES',
+                      'Flutter Developer',
                       style: Style.montserrat_30_bold(context)
                           .copyWith(color: Colors.white),
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Expanded(
+                  Flexible(
+                    flex: 2,
                     child: Paragraph(
                       text:
-                          'Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. ',
+                          'Creative and detail-oriented Flutter Developer with a strong focus on building high-performance, responsive applications for mobile and web. Experienced in Firebase, RESTful APIs, clean architecture, and modern UI/UX design. Passionate about delivering pixel-perfect solutions and writing scalable, maintainable code.',
                       color: Colors.white,
+                      textalign: TextAlign.start,
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Edgbuttom(
-                    title: 'READ MORE',
-                    color: Colors.white,
-                    isdisktop: true,
+                  Expanded(
+                    child: Edgbuttom(
+                      title: 'READ MORE',
+                      color: Colors.white,
+                      isdisktop: true,
+                    ),
                   )
                 ],
               ),
             ),
           ),
-          SizedBox(
-            width: 30,
-          ),
-          Expanded(
+          Flexible(
               child: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(

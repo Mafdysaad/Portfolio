@@ -48,9 +48,11 @@ class _ContactState extends State<Contact> {
           Padding(
             padding: const EdgeInsets.only(bottom: 50),
             child: Paragraph(
-                text:
-                    'My name is Mafdy, and I\’m a graduate of the Egyptian E-Learning University, Faculty of Computer Science. I have a strong interest in software development and specialize in building cross-platform applications using Flutter and Dart',
-                color: Colors.black),
+              text:
+                  'My name is Mafdy, and I\’m a graduate of the Egyptian E-Learning University, Faculty of Computer Science. I have a strong interest in software development and specialize in building cross-platform applications using Flutter and Dart',
+              color: Colors.black,
+              textalign: TextAlign.center,
+            ),
           ),
           Image.asset(Assets.resourceImagesSeparatorBlack),
           Padding(

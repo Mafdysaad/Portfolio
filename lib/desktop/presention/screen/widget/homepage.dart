@@ -47,10 +47,12 @@ class Homepage extends StatelessWidget {
           ),
 
           //Footer
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.25,
-            child: Footersection().animate().slide(
-                begin: Offset(0, 1), end: Offset.zero, duration: 2.seconds),
+          Expanded(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.4,
+              child: Footersection().animate().slide(
+                  begin: Offset(0, 1), end: Offset.zero, duration: 2.seconds),
+            ),
           ),
         ],
       ),

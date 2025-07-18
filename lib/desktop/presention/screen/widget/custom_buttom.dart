@@ -23,7 +23,7 @@ class _CustomButtomState extends State<CustomButtom> {
                     currentindex = index;
                   }),
                   child: InkWell(
-                    onTap: () => ScrollService().scrollToSection(index + 1),
+                    onTap: () => ScrollService.scrollToSection(index + 1),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),

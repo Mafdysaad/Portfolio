@@ -37,12 +37,16 @@ class Assets {
 
   static const String resourceImagesDrawer = "assets/images/drawer.svg";
 
+  static const String resourceImagesEnglish = "assets/images/english.svg";
+
   static const String resourceImagesExit = "assets/images/Exit.svg";
 
   static const String resourceImagesFINALPAGROUND =
       "assets/images/FINALPAGROUND.png";
 
   static const String resourceImagesFacbook = "assets/images/facbook.svg";
+
+  static const String resourceImagesFigma = "assets/images/figma.svg";
 
   static const String resourceImagesFinal = "assets/images/final.png";
 
@@ -58,11 +62,11 @@ class Assets {
   static const String resourceImagesFlutterlogo =
       "assets/images/flutterlogo.png";
 
-  static const String resourceImagesGethup = "assets/images/gethup.png";
-
   static const String resourceImagesGit = "assets/images/git.svg";
 
-  static const String resourceImagesGithupu = "assets/images/githup.svg";
+  static const String resourceImagesGithup = "assets/images/githup.svg";
+
+  static const String resourceImagesGitimag = "assets/images/gitimag.png";
 
   static const String resourceImagesHghdkd = "assets/images/hghdkd.png";
 
@@ -87,6 +91,9 @@ class Assets {
 
   static const String resourceImagesPortfoliobackground =
       "assets/images/portfoliobackground.png";
+
+  static const String resourceImagesPortfolioproject =
+      "assets/images/portfolioproject.png";
 
   static const String resourceImagesRectangle = "assets/images/Rectangle.png";
 

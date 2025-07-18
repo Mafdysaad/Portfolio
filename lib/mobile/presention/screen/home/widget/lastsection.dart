@@ -24,7 +24,7 @@ class Lastsection extends StatelessWidget {
         ),
         InkWell(
             onTap: () {
-              ScrollService().scrollToSection(1);
+              ScrollService.scrollToSection(1);
             },
             child: SvgPicture.asset(Assets.resourceImagesArrow)),
         SizedBox(
@@ -72,7 +72,7 @@ class Lastsection extends StatelessWidget {
             onPressed: () {
               launchUrl(
                   Uri.parse(
-                      'https://github.com/Mafdysaad/Portfolio/raw/main/mafdysaad_cv.pdf'),
+                      'https://github.com/Mafdysaad/Portfolio/raw/main/Mafdysaad\'s (Flutter Developer).pdf'),
                   mode: LaunchMode.externalApplication);
             },
             child: Text(

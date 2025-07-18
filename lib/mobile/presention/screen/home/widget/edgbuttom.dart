@@ -17,34 +17,31 @@ class Edgbuttom extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 30),
-        child: SizedBox(
-            child: Row(
-          mainAxisAlignment:
-              isdisktop ? MainAxisAlignment.start : MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 2,
-              height: 30,
-              color: color,
+      child: SizedBox(
+          child: Row(
+        mainAxisAlignment:
+            isdisktop ? MainAxisAlignment.start : MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 2,
+            height: 30,
+            color: color,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Text(
+              title,
+              style: Style.montserrat_17_bold(context)
+                  .copyWith(color: color, letterSpacing: 3),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Text(
-                title,
-                style: Style.montserrat_17_bold(context)
-                    .copyWith(color: color, letterSpacing: 3),
-              ),
-            ),
-            Container(
-              width: 2,
-              height: 30,
-              color: color,
-            ),
-          ],
-        )),
-      ),
+          ),
+          Container(
+            width: 2,
+            height: 30,
+            color: color,
+          ),
+        ],
+      )),
     );
   }
 }

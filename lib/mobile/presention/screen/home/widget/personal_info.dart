@@ -14,7 +14,7 @@ class PersonalInfo extends StatelessWidget {
     @override
     List<String> options = [
       Assets.resourceImagesMailu,
-      Assets.resourceImagesGithupu,
+      Assets.resourceImagesGithup,
       Assets.resourceImagesLinkedinu
     ];
     return Column(

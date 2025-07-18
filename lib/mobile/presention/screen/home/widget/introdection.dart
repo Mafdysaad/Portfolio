@@ -23,6 +23,7 @@ class Introdection extends StatelessWidget {
           text:
               'My name is Mafdy, and I am a Flutter Developer with experience in building responsive and scalable mobile and web applications using Flutter and Dart. I follow clean architecture patterns such as MVVM and use Cubit for state management. I have hands-on experience with Firebase services (Authentication, Firestore, Hosting) and integrate RESTful APIs efficiently.I\'m also familiar with PHP and SQL for back-end development and have experience deploying projects using Firebase Hosting and automating tasks with GitHub Actions (CI/CD). ',
           color: Colors.white,
+          textalign: TextAlign.center,
         ),
         SizedBox(
           height: 400,
@@ -30,7 +31,7 @@ class Introdection extends StatelessWidget {
         Edgbuttom(
           title: 'MORE',
           color: Colors.white,
-          ontap: () => ScrollService().scrollToSection(2),
+          ontap: () => ScrollService.scrollToSection(2),
         )
       ],
     );

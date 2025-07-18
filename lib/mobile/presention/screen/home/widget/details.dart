@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:portfolio/core/utils/assets.dart';
+
 import 'package:portfolio/mobile/presention/screen/home/widget/Info.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/trycustomInmation.dart';
 
 import 'package:portfolio/utils/inheritedwidget.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../../core/utils/assets.dart';
 
 class Details extends StatelessWidget {
   const Details({
@@ -16,7 +18,7 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> options = [
       Assets.resourceImagesMailu,
-      Assets.resourceImagesGithupu,
+      Assets.resourceImagesGithup,
       Assets.resourceImagesLinkedinu,
     ];
     return AnimatedBuilder(
