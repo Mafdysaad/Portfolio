@@ -30,7 +30,7 @@ class _CustomOptionState extends State<CustomOption> {
           end: size,
         ),
         builder: (context, size, child) => Image.asset(
-          Assets.resourceImagesCustomDrawer,
+          Assets.resourceImagesDrawer,
           width: size,
           height: size,
         ),

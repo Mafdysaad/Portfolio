@@ -53,6 +53,13 @@ class _PortofolioState extends State<Portofolio> {
       url: 'https://github.com/Mafdysaad/Portfolio.git',
       discraption:
           'A responsive Flutter web app showcasing my featured projects with interactive animations and clean UI. Built with Cubit for state management and deployed using GitHub Actions + Firebase Hosting for automated ',
+    ),
+    Projects(
+      Name: 'x_youtube',
+      image: Assets.resourceImagesXYoutube,
+      url: 'https://github.com/Mafdysaad/X_youtube.git',
+      discraption:
+          'A responsive Flutter web app showcasing my featured projects with interactive animations and clean UI. Built with Cubit for state management and deployed using GitHub Actions + Firebase Hosting for automated ',
     )
   ];
 
