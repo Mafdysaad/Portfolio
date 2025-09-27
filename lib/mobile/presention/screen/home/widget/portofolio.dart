@@ -59,7 +59,7 @@ class _PortofolioState extends State<Portofolio> {
       image: Assets.resourceImagesXYoutube,
       url: 'https://github.com/Mafdysaad/X_youtube.git',
       discraption:
-          'A responsive Flutter web app showcasing my featured projects with interactive animations and clean UI. Built with Cubit for state management and deployed using GitHub Actions + Firebase Hosting for automated ',
+          'a Flutter-based YouTube clone that allows users to watch videos, view details, and explore related content through a clean and responsive UI. It also integrates a YouTube media downloader via API to save videos and audio locally.',
     )
   ];
 
@@ -133,10 +133,13 @@ class _PortofolioState extends State<Portofolio> {
                               ),
                             ),
                             const SizedBox(height: 8),
-                            Text(
-                              project.discraption,
-                              style: const TextStyle(color: Colors.white70),
-                              textAlign: TextAlign.center,
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                project.discraption,
+                                style: const TextStyle(color: Colors.white70),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ],
                         ).animate().fadeIn().slideY(begin: 0.2),

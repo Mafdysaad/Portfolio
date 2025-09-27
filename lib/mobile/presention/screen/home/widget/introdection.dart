@@ -32,7 +32,10 @@ class Introdection extends StatelessWidget {
           title: 'MORE',
           color: Colors.white,
           ontap: () => ScrollService.scrollToSection(2),
-        )
+        ),
+        SizedBox(
+          height: 20,
+        ),
       ],
     );
   }
