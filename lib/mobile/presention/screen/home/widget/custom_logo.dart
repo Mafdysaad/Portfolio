@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
 class CustomLogo extends StatelessWidget {
-  final String Assetsname;
+  final String assetsname;
   final String title;
 
-  const CustomLogo({super.key, required this.Assetsname, required this.title});
+  const CustomLogo({super.key, required this.assetsname, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CustomLogo extends StatelessWidget {
             width: 180,
             height: 200,
             child: SvgPicture.asset(
-              Assetsname,
+              assetsname,
               fit: BoxFit.fitWidth,
             ),
           ),

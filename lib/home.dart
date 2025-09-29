@@ -8,8 +8,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdabtiveLayout(
-        MobileLayout: (context) => Mobile(),
-        TablietLayout: (context) => Desktop(),
-        DesktopLayout: (context) => Desktop());
+        mobileLayout: (context) => Mobile(),
+        tablietLayout: (context) => Desktop(),
+        desktopLayout: (context) => Desktop());
   }
 }

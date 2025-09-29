@@ -20,46 +20,46 @@ class _PortofolioState extends State<Portofolio> {
 
   final List<Projects> list = [
     Projects(
-      Name: 'Bookly App',
+      name: 'Berry Cart ',
       image: Assets.resourceImagesBookelyapp,
       url: 'https://github.com/Mafdysaad/BooklyApp.git',
       discraption:
-          'A  simple book preview application with smooth navigation and book details.Integrated with url_launcher to open book links in the browser.',
+          'An online shopping app where users can browse products, purchase with secure online payment, and track their orders in real time',
     ),
     Projects(
-      Name: 'Chat App',
+      name: ' Echo Chat',
       image: Assets.resourceImagesChatapp,
       url: 'https://github.com/Mafdysaad/chat_app.git',
       discraption:
-          'A real-time messaging app built using Firebase Realtime Database.Supports sending/receiving messages instantly in a chatroom layout',
+          'EchoChat is a real-time messaging app that allows users to chat instantly, share voice messages, and exchange images with ease. It provides a smooth and interactive communication experience.',
     ),
     Projects(
-      Name: 'Healthcare Dashboards (Responsive Dashboard)',
+      name: 'Fit Index',
       image: Assets.resourceImagesIbmapp,
       url: 'https://github.com/Mafdysaad/health_care_dashboards.git',
       discraption:
-          'A  fully responsive healthcare admin dashboard UI designed for medical data visualization.Supports desktop, tablet, and mobile layouts with a modern, clean design.Built with Cubit for state management and dynamic responsiveness.',
+          'Fit Index is a health app that calculates your Body Mass Index (BMI) based on height and weight. It helps users track their fitness level and understand whether they are underweight, normal, overweight, or obese.',
     ),
     Projects(
-      Name: 'WeatherApp',
+      name: 'WeatherApp',
       image: Assets.resourceImagesWaterapp,
       url: 'https://github.com/Mafdysaad/Weather_app.git',
       discraption:
           'A simple and responsive weather app that shows real-time weather data based on the user’s location using Google API. Managed app states using Cubit for clean and maintainable code',
     ),
     Projects(
-      Name: 'Portfolio Website',
+      name: 'Personal Portfolio Website ',
       image: Assets.resourceImagesPortfolioproject,
       url: 'https://github.com/Mafdysaad/Portfolio.git',
       discraption:
-          'A responsive Flutter web app showcasing my featured projects with interactive animations and clean UI. Built with Cubit for state management and deployed using GitHub Actions + Firebase Hosting for automated ',
+          'A fully responsive portfolio website built from scratch using Flutter Web. It showcases my projects, skills, and experience with a clean UI/UX design ',
     ),
     Projects(
-      Name: 'x_youtube',
+      name: 'X-YouTube ',
       image: Assets.resourceImagesXYoutube,
       url: 'https://github.com/Mafdysaad/X_youtube.git',
       discraption:
-          'a Flutter-based YouTube clone that allows users to watch videos, view details, and explore related content through a clean and responsive UI. It also integrates a YouTube media downloader via API to save videos and audio locally.',
+          ' A Flutter-based mobile app that fetches and plays YouTube videos using APIs, showcasing skills in Flutter development, API integration, and state management.',
     )
   ];
 
@@ -125,7 +125,7 @@ class _PortofolioState extends State<Portofolio> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              project.Name,
+                              project.name,
                               style: const TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
@@ -133,8 +133,7 @@ class _PortofolioState extends State<Portofolio> {
                               ),
                             ),
                             const SizedBox(height: 8),
-                            FittedBox(
-                              fit: BoxFit.scaleDown,
+                            Expanded(
                               child: Text(
                                 project.discraption,
                                 style: const TextStyle(color: Colors.white70),

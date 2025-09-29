@@ -45,24 +45,24 @@ class Skills extends StatelessWidget {
                   crossAxisAlignment: WrapCrossAlignment.start,
                   children: [
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesFlutter,
+                        assetsname: Assets.resourceImagesFlutter,
                         title: 'FLUTTER'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesDart, title: 'Dart'),
+                        assetsname: Assets.resourceImagesDart, title: 'Dart'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesRestApi,
+                        assetsname: Assets.resourceImagesRestApi,
                         title: 'RESTFUL API'),
                   ],
                 )
               : Column(
                   children: [
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesFlutter,
+                        assetsname: Assets.resourceImagesFlutter,
                         title: 'FLUTTER'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesDart, title: 'Dart'),
+                        assetsname: Assets.resourceImagesDart, title: 'Dart'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesRestApi,
+                        assetsname: Assets.resourceImagesRestApi,
                         title: 'RESTFUL API'),
                   ],
                 ),
@@ -91,32 +91,32 @@ class Skills extends StatelessWidget {
                   runSpacing: 30,
                   children: [
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesFirebase,
+                        assetsname: Assets.resourceImagesFirebase,
                         title: 'FIREBASE'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesVector,
+                        assetsname: Assets.resourceImagesVector,
                         title: 'MYSQL'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesAndrid,
+                        assetsname: Assets.resourceImagesAndrid,
                         title: 'ANDRIOD'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesKotlin,
+                        assetsname: Assets.resourceImagesKotlin,
                         title: 'KOTLIN'),
                   ],
                 )
               : Column(
                   children: [
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesFirebase,
+                        assetsname: Assets.resourceImagesFirebase,
                         title: 'FIREBASE'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesVector,
+                        assetsname: Assets.resourceImagesVector,
                         title: 'MYSQL'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesAndrid,
+                        assetsname: Assets.resourceImagesAndrid,
                         title: 'ANDRIOD'),
                     CustomLogo(
-                        Assetsname: Assets.resourceImagesKotlin,
+                        assetsname: Assets.resourceImagesKotlin,
                         title: 'KOTLIN'),
                   ],
                 )

@@ -40,7 +40,7 @@ class _TrycustominmationState extends State<Opations> {
     if (widget.isVertical) {
       newIndex = (details.localPosition.dx ~/ itemWidth)
           .clamp(0, widget.list.length - 1);
-      print('is horsintal ===== width = $itemWidth');
+      
     } else {
       newIndex = (details.localPosition.dy ~/ itemHeight)
           .clamp(0, widget.list.length - 1);

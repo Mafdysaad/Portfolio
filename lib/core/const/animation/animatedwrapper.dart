@@ -7,14 +7,14 @@ class AnimatedWrapper extends StatefulWidget {
   final void Function()? function;
 
   const AnimatedWrapper(
-      {Key? key,
+      {super.key,
       required this.child,
       this.duration = const Duration(milliseconds: 200),
       this.scaleFactor = 1.2,
-      this.function})
-      : super(key: key);
+      this.function});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AnimatedWrapperState createState() => _AnimatedWrapperState();
 }
 
@@ -24,7 +24,7 @@ class _AnimatedWrapperState extends State<AnimatedWrapper> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onPanUpdate: (_dragupdate) => setState(() => scale = widget.scaleFactor),
+      onPanUpdate: (dragupdate) => setState(() => scale = widget.scaleFactor),
       onPanEnd: (_) => setState(() => scale = 1.0),
       child: AnimatedContainer(
         duration: widget.duration,

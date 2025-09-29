@@ -6,11 +6,11 @@ class Buildpage extends StatelessWidget {
   final Widget child;
 
   const Buildpage({
-    Key? key,
+    super.key,
     this.backgroundImage,
     this.backgroundColor,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
