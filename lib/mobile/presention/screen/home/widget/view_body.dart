@@ -13,10 +13,10 @@ class ViewBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned.fill(
-            child: Image(
-          alignment: Alignment.centerRight,
-          image: AssetImage(Assets.resourceImagesFinalmobile),
-          fit: BoxFit.contain,
+            child: const Image(
+          alignment: Alignment.center,
+          image: AssetImage('assets/images/mmmmm.png'),
+          fit: BoxFit.cover,
           height: double.infinity,
         )),
         CustomShape(),

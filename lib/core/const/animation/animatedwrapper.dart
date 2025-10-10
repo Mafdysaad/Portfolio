@@ -29,7 +29,9 @@ class _AnimatedWrapperState extends State<AnimatedWrapper> {
       child: AnimatedContainer(
         duration: widget.duration,
         transform: Matrix4.identity()..scale(scale),
-        child: GestureDetector(onTap: widget.function, child: widget.child),
+        child: GestureDetector(
+            onTap: widget.function,
+            child: RepaintBoundary(child: widget.child)),
       ),
     );
   }

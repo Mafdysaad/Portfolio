@@ -20,9 +20,10 @@ class CustomRegtangle extends StatelessWidget {
 }
 
 class CutRectanglePainter extends CustomPainter {
+  final paintt = Paint();
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
+    Paint paint = paintt
       ..color = const Color.fromARGB(150, 123, 124, 124)
       ..style = PaintingStyle.fill;
 
@@ -36,5 +37,7 @@ class CutRectanglePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
 }

@@ -32,7 +32,7 @@ class Rightsection extends StatelessWidget {
                 Expanded(
                         flex: 1,
                         child: Image.asset(
-                          Assets.resourceImagesFinal,
+                          'assets/images/mmmmm.png',
                           fit: BoxFit.cover,
                           alignment: Alignment.center,
                         ))

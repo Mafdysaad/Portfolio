@@ -14,7 +14,7 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leadingWidth: 120,
       toolbarHeight: 120,
-      backgroundColor: Color(0xff0c0b0b),
+      backgroundColor: Colors.transparent,
       leading: AnimatedWrapper(
         child: Padding(
           padding: const EdgeInsets.only(left: 24, top: 10),

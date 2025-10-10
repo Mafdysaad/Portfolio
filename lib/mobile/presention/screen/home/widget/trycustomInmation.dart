@@ -40,7 +40,6 @@ class _TrycustominmationState extends State<Opations> {
     if (widget.isVertical) {
       newIndex = (details.localPosition.dx ~/ itemWidth)
           .clamp(0, widget.list.length - 1);
-      
     } else {
       newIndex = (details.localPosition.dy ~/ itemHeight)
           .clamp(0, widget.list.length - 1);
@@ -69,7 +68,7 @@ class _TrycustominmationState extends State<Opations> {
                     transform: Matrix4.identity()..scale(scaleFactor),
                     key:
                         index == 0 ? itemKey : null, // 🔑 المفتاح لأول عنصر فقط
-                    child: widget.list[index],
+                    child: RepaintBoundary(child: widget.list[index]),
                   ),
                 );
               }),
@@ -79,11 +78,13 @@ class _TrycustominmationState extends State<Opations> {
               spacing: 20,
               children: List.generate(widget.list.length, (index) {
                 double scaleFactor = currentIndex == index ? 1.2 : 1;
-                return AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  transform: Matrix4.identity()..scale(scaleFactor),
-                  key: index == 0 ? itemKey : null,
-                  child: widget.list[index],
+                return RepaintBoundary(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    transform: Matrix4.identity()..scale(scaleFactor),
+                    key: index == 0 ? itemKey : null,
+                    child: RepaintBoundary(child: widget.list[index]),
+                  ),
                 );
               }),
             ),
