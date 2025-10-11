@@ -15,7 +15,7 @@ class ViewBody extends StatelessWidget {
             child: const Image(
           alignment: Alignment.centerRight,
           image: AssetImage('assets/images/mafdym.png'),
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
           height: double.infinity,
         )),
         CustomShape(),

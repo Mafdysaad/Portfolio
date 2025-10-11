@@ -43,7 +43,7 @@ class _HomeState extends State<Mobile> with TickerProviderStateMixin {
       child: Scaffold(
           extendBodyBehindAppBar: true,
           key: ScrollService().scaffoldKey,
-          backgroundColor: Color.fromARGB(0, 65, 65, 66),
+          backgroundColor: Color.fromARGB(255, 6, 6, 6),
           drawer: CustomDrawer(
             items: DrawerItems(),
           ),
