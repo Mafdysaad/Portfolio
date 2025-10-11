@@ -12,13 +12,14 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 120,
-      toolbarHeight: 120,
+      leadingWidth: 90,
       backgroundColor: Colors.transparent,
       leading: AnimatedWrapper(
         child: Padding(
           padding: const EdgeInsets.only(left: 24, top: 10),
-          child: Image.asset(Assets.resourceImagesFlutterlogo),
+          child: Image.asset(
+            Assets.resourceImagesFlutterlogo,
+          ),
         ),
         function: () => Scaffold.of(context).openEndDrawer(),
       ),
@@ -26,7 +27,10 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
             padding: EdgeInsets.only(right: 30, top: 10),
             child: AnimatedWrapper(
-              child: SvgPicture.asset(Assets.resourceImagesDrawer),
+              child: SvgPicture.asset(
+                Assets.resourceImagesDrawer,
+                width: 40,
+              ),
               function: () => Scaffold.of(context).openDrawer(),
             ))
       ],

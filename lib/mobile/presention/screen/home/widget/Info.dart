@@ -21,19 +21,19 @@ class Info extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            // RepaintBoundary(
-            //   child: Text(
-            //     '👋',
-            //     style: Style.soyombo20_bold(context),
-            //   )
-            //       .animate(
-            //           onPlay: (controller) =>
-            //               controller.repeat(period: Duration(seconds: 2)))
-            //       .shake(
-            //           hz: 10,
-            //           duration: Duration(milliseconds: 500),
-            //           curve: Curves.easeInOut),
-            // )
+            RepaintBoundary(
+              child: Text(
+                '👋',
+                style: Style.soyombo20_bold(context),
+              )
+                  .animate(
+                      onPlay: (controller) =>
+                          controller.repeat(period: Duration(seconds: 2)))
+                  .shake(
+                      hz: 10,
+                      duration: Duration(milliseconds: 500),
+                      curve: Curves.easeInOut),
+            )
           ]),
           SizedBox(
             height: 5,
@@ -43,28 +43,28 @@ class Info extends StatelessWidget {
             style: Style.soyombo20_bold(context).copyWith(fontSize: 30),
             textAlign: TextAlign.end,
           ),
-          // RepaintBoundary(
-          //   child: SizedBox(
-          //     height: 30,
-          //     child: Align(
-          //       alignment: Alignment.center,
-          //       child: AnimatedTextKit(
-          //           pause: Duration(
-          //             milliseconds: 1200,
-          //           ),
-          //           repeatForever: true,
-          //           animatedTexts: [
-          //             TyperAnimatedText('Senior Flutter Developer',
-          //                 speed: Duration(milliseconds: 60),
-          //                 textStyle:
-          //                     Style.soyombo18_sembold(context).copyWith()),
-          //             TyperAnimatedText('At  Platform Technologies',
-          //                 speed: Duration(milliseconds: 60),
-          //                 textStyle: Style.soyombo18_sembold(context))
-          //           ]),
-          //     ),
-          //   ),
-          // ),
+          RepaintBoundary(
+            child: SizedBox(
+              height: 30,
+              child: Align(
+                alignment: Alignment.center,
+                child: AnimatedTextKit(
+                    pause: Duration(
+                      milliseconds: 1200,
+                    ),
+                    repeatForever: true,
+                    animatedTexts: [
+                      TyperAnimatedText('Senior Flutter Developer',
+                          speed: Duration(milliseconds: 60),
+                          textStyle:
+                              Style.soyombo18_sembold(context).copyWith()),
+                      TyperAnimatedText('At  Platform Technologies',
+                          speed: Duration(milliseconds: 60),
+                          textStyle: Style.soyombo18_sembold(context))
+                    ]),
+              ),
+            ),
+          ),
         ]);
   }
 }

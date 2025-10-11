@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/utils/assets.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_shape.dart';
 
@@ -14,8 +13,8 @@ class ViewBody extends StatelessWidget {
       children: [
         Positioned.fill(
             child: const Image(
-          alignment: Alignment.center,
-          image: AssetImage('assets/images/mmmmm.png'),
+          alignment: Alignment.centerRight,
+          image: AssetImage('assets/images/mafdym.png'),
           fit: BoxFit.cover,
           height: double.infinity,
         )),

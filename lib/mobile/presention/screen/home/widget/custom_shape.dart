@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:portfolio/core/utils/assets.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/Info.dart';
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_regtangle.dart';
@@ -13,9 +15,9 @@ class CustomShape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> options = [
-      // Assets.resourceImagesMail,
-      // //  Assets.resourceImagesGit,
-      // Assets.resourceImagesLinkedin,
+      Assets.resourceImagesMailu,
+      Assets.resourceImagesGithup,
+      Assets.resourceImagesLinkedinu,
     ];
     return AnimatedBuilder(
       animation: Animationprovider.of(context)!.animation_1,
@@ -65,7 +67,7 @@ class CustomShape extends StatelessWidget {
                                                             '&body=Hi Mafdy,'));
                                           },
                                           child: RepaintBoundary(
-                                            child: Image.asset(
+                                            child: SvgPicture.asset(
                                                 width: MediaQuery.of(context)
                                                         .size
                                                         .width *
