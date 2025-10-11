@@ -4,9 +4,24 @@ import 'package:portfolio/mobile/presention/screen/home/widget/custom_buttom.dar
 import 'package:portfolio/mobile/presention/screen/home/widget/portofolio.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 
-class Customportfilio extends StatelessWidget {
+class Customportfilio extends StatefulWidget {
   const Customportfilio({super.key, required this.isdesktop});
   final bool isdesktop;
+
+  @override
+  State<Customportfilio> createState() => _CustomportfilioState();
+}
+
+class _CustomportfilioState extends State<Customportfilio> {
+  @override
+  void initState() {
+    precacheImage(
+        AssetImage(
+          Assets.resourceImagesPortfoliobackground,
+        ),
+        context);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +39,7 @@ class Customportfilio extends StatelessWidget {
               padding: const EdgeInsets.all(40),
               child: CustomButtom(
                 title: "Portofilio",
-                style: isdesktop
+                style: widget.isdesktop
                     ? Style.montserrat_30_bold(context)
                     : Style.montserrat_14(context),
               ),
@@ -34,7 +49,7 @@ class Customportfilio extends StatelessWidget {
           child: Column(
             children: [
               Portofolio(
-                isdisktop: isdesktop,
+                isdisktop: widget.isdesktop,
               ),
               Padding(
                 padding: const EdgeInsets.all(10),
