@@ -13,7 +13,7 @@ class ViewBody extends StatelessWidget {
       children: [
         Positioned.fill(
             child: const Image(
-          alignment: Alignment.centerRight,
+          alignment: Alignment.centerLeft,
           image: AssetImage('assets/images/mafdym.png'),
           fit: BoxFit.contain,
           height: double.infinity,
