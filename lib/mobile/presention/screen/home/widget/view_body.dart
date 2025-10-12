@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/utils/assets.dart';
 
 import 'package:portfolio/mobile/presention/screen/home/widget/custom_shape.dart';
 
@@ -25,7 +26,7 @@ class _ViewBodyState extends State<ViewBody> {
             left: 0,
             bottom: 0,
             child: const Image(
-              image: AssetImage('assets/images/mafdym.png'),
+              image: AssetImage(Assets.resourceImagesMafdym),
               fit: BoxFit.fill,
               height: double.infinity,
             )),

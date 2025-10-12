@@ -21,10 +21,17 @@ class _PortofolioState extends State<Portofolio> {
   final List<Projects> list = [
     Projects(
       name: 'Berry Cart ',
-      image: Assets.resourceImagesBookelyapp,
-      url: 'https://github.com/Mafdysaad/BooklyApp.git',
+      image: Assets.resourceImagesBerry,
+      url: 'https://github.com/Mafdysaad/BerryCart-.git',
       discraption:
           'An online shopping app where users can browse products, purchase with secure online payment, and track their orders in real time',
+    ),
+    Projects(
+      name: 'Book Hive ',
+      image: Assets.resourceImagesBookelyapp,
+      url: 'https://github.com/Mafdysaad/-BookHive-.git',
+      discraption:
+          'Book Hive A Flutter app that lets users search, explore, and view detailed information about books including price and rating before purchasing.',
     ),
     Projects(
       name: ' Echo Chat',

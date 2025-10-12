@@ -6,14 +6,18 @@ class Assets {
 
   static const String resourceImagesArrow = "assets/images/arrow.svg";
 
-  static const String resourceImagesBackground = "assets/images/background.png";
+  static const String resourceImagesBackground =
+      "assets/images/background.webp";
+
+  static const String resourceImagesBerry = "assets/images/Berry.webp";
 
   static const String resourceImagesBlackrectangl =
       "assets/images/blackrectangl.png";
 
-  static const String resourceImagesBookelyapp = "assets/images/bookelyapp.png";
+  static const String resourceImagesBookelyapp =
+      "assets/images/bookelyapp.webp";
 
-  static const String resourceImagesChatapp = "assets/images/chatapp.png";
+  static const String resourceImagesChatapp = "assets/images/chatapp.webp";
 
   static const String resourceImagesCustomfacebook =
       "assets/images/customfacebook.svg";
@@ -66,7 +70,7 @@ class Assets {
 
   static const String resourceImagesGitimag = "assets/images/gitimag.png";
 
-  static const String resourceImagesIbmapp = "assets/images/ibmapp.png";
+  static const String resourceImagesIbmapp = "assets/images/ibmapp.webp";
 
   static const String resourceImagesItfordesktop =
       "assets/images/itfordesktop.svg";
@@ -75,7 +79,11 @@ class Assets {
 
   static const String resourceImagesLinkedin = "assets/images/linkedin.png";
 
-  static const String resourceImagesLinkedinu = "assets/images/linkedinu.svg";
+  static const String resourceImagesLinkedinu = "assets/images/linkedinu.png";
+
+  static const String resourceImagesMafdyf = "assets/images/mafdyf.webp";
+
+  static const String resourceImagesMafdym = "assets/images/mafdym.webp";
 
   static const String resourceImagesMail = "assets/images/mail.png";
 
@@ -83,13 +91,15 @@ class Assets {
 
   static const String resourceImagesMantinace = "assets/images/mantinace.png";
 
+  static const String resourceImagesMfdys = "assets/images/mfdys.png";
+
   static const String resourceImagesMysql = "assets/images/mysql.svg";
 
   static const String resourceImagesPortfoliobackground =
-      "assets/images/portfoliobackground.png";
+      "assets/images/portfoliobackground.webp";
 
   static const String resourceImagesPortfolioproject =
-      "assets/images/portfolioproject.png";
+      "assets/images/portfolioproject.webp";
 
   static const String resourceImagesRectangle = "assets/images/Rectangle.png";
 
@@ -103,7 +113,7 @@ class Assets {
 
   static const String resourceImagesVector = "assets/images/Vector.svg";
 
-  static const String resourceImagesWaterapp = "assets/images/waterapp.png";
+  static const String resourceImagesWaterapp = "assets/images/waterapp.webp";
 
-  static const String resourceImagesXYoutube = "assets/images/x_youtube.png";
+  static const String resourceImagesXYoutube = "assets/images/x_youtube.webp";
 }

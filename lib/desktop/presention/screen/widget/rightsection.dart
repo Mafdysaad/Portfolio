@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:portfolio/core/utils/assets.dart';
+
 import 'package:portfolio/desktop/presention/screen/widget/custom_buttom.dart';
 import 'package:portfolio/desktop/presention/screen/widget/customshipe.dart';
 
@@ -32,7 +33,7 @@ class Rightsection extends StatelessWidget {
                 Expanded(
                         flex: 1,
                         child: Image.asset(
-                          'assets/images/mafdyf.png',
+                          Assets.resourceImagesMafdyf,
                           fit: BoxFit.cover,
                           alignment: Alignment.center,
                         ))
