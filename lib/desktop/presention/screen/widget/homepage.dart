@@ -14,8 +14,7 @@ class Homepage extends StatelessWidget {
     return Container(
       color: const Color(0xffD7D7D7),
       width: double.infinity,
-      height:
-          MediaQuery.of(context).size.height, // ← دا بيضمن أن العنصر ليه حجم
+      height: 800,
       child: Column(
         children: [
           SizedBox(
@@ -51,18 +50,14 @@ class Homepage extends StatelessWidget {
           ),
 
           //Footer
-          Expanded(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.4,
-              child: Footersection()
-                  .animate(
-                    onPlay: (controller) => controller.forward(),
-                  )
-                  .slide(
-                      begin: Offset(0, 1),
-                      end: Offset.zero,
-                      duration: 2.seconds),
-            ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.5,
+            child: Footersection()
+                .animate(
+                  onPlay: (controller) => controller.forward(),
+                )
+                .slide(
+                    begin: Offset(0, 1), end: Offset.zero, duration: 2.seconds),
           ),
         ],
       ),

@@ -1,7 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:portfolio/core/function/helperfunction.dart';
+
 import 'package:portfolio/core/utils/assets.dart';
 import 'package:portfolio/utils/fontstyle.dart';
 import 'package:portfolio/utils/size_config.dart';

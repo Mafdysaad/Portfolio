@@ -31,21 +31,19 @@ class Footersection extends StatelessWidget {
                           .copyWith(color: Colors.white),
                     ),
                   ),
-                  Flexible(
-                    flex: 2,
-                    child: Paragraph(
-                      text:
-                          'Creative and detail-oriented Flutter Developer with a strong focus on building high-performance, responsive applications for mobile and web. Experienced in Firebase, RESTful APIs, clean architecture, and modern UI/UX design. Passionate about delivering pixel-perfect solutions and writing scalable, maintainable code.',
-                      color: Colors.white,
-                      textalign: TextAlign.start,
-                    ),
+                  Paragraph(
+                    text:
+                        'Creative and detail-oriented Flutter Developer with a strong focus on building high-performance, responsive applications for mobile and web. Experienced in Firebase, RESTful APIs, clean architecture, and modern UI/UX design. Passionate about delivering pixel-perfect solutions and writing scalable, maintainable code.',
+                    color: Colors.white,
+                    textalign: TextAlign.start,
                   ),
-                  Expanded(
-                    child: Edgbuttom(
-                      title: 'READ MORE',
-                      color: Colors.white,
-                      isdisktop: true,
-                    ),
+                  Edgbuttom(
+                    title: 'READ MORE',
+                    color: Colors.white,
+                    isdisktop: true,
+                  ),
+                  SizedBox(
+                    height: 10,
                   )
                 ],
               ),

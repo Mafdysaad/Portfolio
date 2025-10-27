@@ -79,7 +79,7 @@ class Assets {
 
   static const String resourceImagesLinkedin = "assets/images/linkedin.png";
 
-  static const String resourceImagesLinkedinu = "assets/images/linkedinu.png";
+  static const String resourceImagesLinkedinu = "assets/images/linkedinu.svg";
 
   static const String resourceImagesMafdyf = "assets/images/mafdyf.webp";
 

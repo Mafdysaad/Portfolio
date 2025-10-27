@@ -15,11 +15,6 @@ class Customportfilio extends StatefulWidget {
 class _CustomportfilioState extends State<Customportfilio> {
   @override
   void initState() {
-    precacheImage(
-        AssetImage(
-          Assets.resourceImagesPortfoliobackground,
-        ),
-        context);
     super.initState();
   }
 

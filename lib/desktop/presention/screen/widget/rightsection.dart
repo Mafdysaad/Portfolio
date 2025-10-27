@@ -13,7 +13,7 @@ class Rightsection extends StatelessWidget {
     return LayoutBuilder(builder: (context, constran) {
       return Customshipe(
           width: constran.maxWidth,
-          higth: constran.maxHeight,
+          higth: 800,
           child: Padding(
               padding: const EdgeInsets.only(right: 40, top: 20, left: 80),
               child:
