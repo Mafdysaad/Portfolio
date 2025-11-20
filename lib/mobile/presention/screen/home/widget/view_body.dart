@@ -13,25 +13,35 @@ class ViewBody extends StatefulWidget {
 }
 
 class _ViewBodyState extends State<ViewBody> {
-  void initstate() {
+  @override
+  void initState() {
     super.initState();
-    precacheImage(const AssetImage('assets/images/mafdym.png'), context);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      precacheImage(
+        const AssetImage(Assets.resourceImagesMafdym),
+        context,
+      );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Positioned.fill(
-            left: 0,
-            bottom: 0,
-            child: const Image(
+    return SingleChildScrollView(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(minHeight: 800),
+        child: Stack(
+          alignment: AlignmentGeometry.bottomCenter,
+          children: [
+            Positioned.fill(
+                child: const Image(
               image: AssetImage(Assets.resourceImagesMafdym),
               fit: BoxFit.fill,
               height: double.infinity,
             )),
-        CustomShape(),
-      ],
+            Positioned(child: CustomShape()),
+          ],
+        ),
+      ),
     );
   }
 }

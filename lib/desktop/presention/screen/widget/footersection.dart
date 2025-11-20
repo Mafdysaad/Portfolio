@@ -22,6 +22,7 @@ class Footersection extends StatelessWidget {
               child: Column(
                 spacing: 10,
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),

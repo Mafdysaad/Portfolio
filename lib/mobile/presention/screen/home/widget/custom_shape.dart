@@ -14,31 +14,33 @@ class CustomShape extends StatelessWidget {
   const CustomShape({super.key});
   @override
   Widget build(BuildContext context) {
+    final annmation = Animationprovider.of(context)!.animation_1;
+    final size = MediaQuery.of(context).size;
+    final w = size.width;
     List<String> options = [
       Assets.resourceImagesMailu,
       Assets.resourceImagesGithup,
       Assets.resourceImagesLinkedinu,
     ];
     return AnimatedBuilder(
-      animation: Animationprovider.of(context)!.animation_1,
+      animation: annmation,
       builder: (context, child) => AnimatedPositioned(
-        bottom: Animationprovider.of(context)!.animation_1.value.distance,
         duration: Duration(microseconds: 300),
         child: SizedBox(
             width: MediaQuery.of(context).size.width,
             child: FittedBox(
                 fit: BoxFit.cover,
                 child: CustomRegtangle(
-                    higth: MediaQuery.of(context).size.height,
-                    width: MediaQuery.of(context).size.width,
+                    width: w,
                     child: AnimatedBuilder(
                       animation: Animationprovider.of(context)!.animation_2,
                       builder: (context, child) => SlideTransition(
                         position: Animationprovider.of(context)!.animation_2,
                         child: SizedBox(
-                          width: MediaQuery.of(context).size.width,
+                          width: w,
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 60, bottom: 30),
+                            padding:
+                                const EdgeInsets.only(top: 100, bottom: 30),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -72,10 +74,7 @@ class CustomShape extends StatelessWidget {
                                                         .size
                                                         .width *
                                                     .04,
-                                                height: MediaQuery.of(context)
-                                                        .size
-                                                        .height *
-                                                    .04,
+                                                height: 30,
                                                 fit: BoxFit.contain,
                                                 options[index]),
                                           ))),

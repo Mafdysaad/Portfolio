@@ -17,7 +17,7 @@ class Buildpage extends StatelessWidget {
     return Container(
       width: double.infinity,
       constraints: BoxConstraints(
-        minHeight: MediaQuery.of(context).size.height,
+        minHeight: 800,
       ),
       decoration: BoxDecoration(
         color: backgroundColor,

@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomRegtangle extends StatelessWidget {
-  final double width, higth;
+  final double width;
   final Widget child;
-  const CustomRegtangle(
-      {super.key,
-      required this.higth,
-      required this.width,
-      required this.child});
+  const CustomRegtangle({super.key, required this.width, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: Size(width, higth),
+      size: Size(width, 250),
       painter: CutRectanglePainter(),
       child: child,
     );
@@ -20,10 +16,9 @@ class CustomRegtangle extends StatelessWidget {
 }
 
 class CutRectanglePainter extends CustomPainter {
-  final paintt = Paint();
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = paintt
+    Paint paint = Paint()
       ..color = const Color.fromARGB(150, 123, 124, 124)
       ..style = PaintingStyle.fill;
 

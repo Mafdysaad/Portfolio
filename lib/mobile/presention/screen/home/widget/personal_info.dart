@@ -60,7 +60,7 @@ class PersonalInfo extends StatelessWidget {
                       },
                       child: SvgPicture.asset(
                           width: MediaQuery.of(context).size.width * .04,
-                          height: MediaQuery.of(context).size.height * .04,
+                          height: 30,
                           options[index]))),
               isVertical: true,
             ),
