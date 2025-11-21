@@ -28,7 +28,7 @@ class _ViewBodyState extends State<ViewBody> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: 800),
+        constraints: BoxConstraints(minHeight: 750),
         child: Stack(
           alignment: AlignmentGeometry.bottomCenter,
           children: [
