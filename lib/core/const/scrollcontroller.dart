@@ -7,9 +7,9 @@ class ScrollService {
 
   // 2️⃣ ده الـ constructor العام اللي بيرجع نفس الـ instance
   factory ScrollService() => _instance;
+  ScrollService._internal();
 
   // 3️⃣ ده constructor خاص (private) علشان ما حدش يقدر يعمل new من بره
-  ScrollService._internal();
 
   // 4️⃣ الكنترولر نفسه
   static ItemScrollController drawerScrollController = ItemScrollController();

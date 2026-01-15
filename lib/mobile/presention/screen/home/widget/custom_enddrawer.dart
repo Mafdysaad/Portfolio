@@ -15,8 +15,6 @@ import 'package:portfolio/mobile/presention/screen/home/widget/skills.dart';
 
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-final ItemScrollController scrollController = ItemScrollController();
-
 class CustomEnddrawer extends StatefulWidget {
   const CustomEnddrawer({
     super.key,
