@@ -72,7 +72,7 @@ class Lastsection extends StatelessWidget {
             onPressed: () {
               launchUrl(
                   Uri.parse(
-                      'https://github.com/Mafdysaad/Portfolio/raw/main/Mafdy_Saad_Flutter_developer.pdf'),
+                      'https://github.com/Mafdysaad/Portfolio/raw/main/Mafdy_Saad_Flutter_Developer.pdf'),
                   mode: LaunchMode.externalApplication);
             },
             child: Text(
